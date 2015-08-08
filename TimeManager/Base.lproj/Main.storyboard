@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="OSP-DIN.ttf">
@@ -40,24 +41,34 @@
                                             <constraint firstAttribute="height" constant="70" id="Cww-7N-eVE"/>
                                         </constraints>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ENTER TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEC-T1-NYg">
-                                        <rect key="frame" x="221" y="544" width="159" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEC-T1-NYg">
+                                        <rect key="frame" x="244" y="544" width="159" height="41"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="41" id="R86-ap-kUZ"/>
+                                            <constraint firstAttribute="width" constant="159" id="HXj-1u-3M1"/>
+                                            <constraint firstAttribute="height" constant="41" id="dZO-xc-Fem"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="45"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stopwatch" translatesAutoresizingMaskIntoConstraints="NO" id="hkC-BL-cEs">
+                                        <rect key="frame" x="197" y="545" width="47" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="2m1-Nd-FB6"/>
+                                            <constraint firstAttribute="width" constant="47" id="UHT-ce-AMa"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="whd-JE-xbI" secondAttribute="bottom" id="81j-nD-5sx"/>
-                                    <constraint firstItem="3uR-yk-oST" firstAttribute="top" secondItem="tEC-T1-NYg" secondAttribute="bottom" constant="-55" id="8EA-Hp-G6U"/>
                                     <constraint firstItem="whd-JE-xbI" firstAttribute="leading" secondItem="yTR-S8-D9j" secondAttribute="leading" id="AFa-VC-Wtk"/>
                                     <constraint firstItem="whd-JE-xbI" firstAttribute="top" secondItem="yTR-S8-D9j" secondAttribute="top" id="RIm-B7-uWv"/>
                                     <constraint firstAttribute="trailing" secondItem="3uR-yk-oST" secondAttribute="trailing" id="S35-Ra-zzY"/>
                                     <constraint firstAttribute="trailing" secondItem="whd-JE-xbI" secondAttribute="trailing" id="S4m-oN-drI"/>
+                                    <constraint firstItem="tEC-T1-NYg" firstAttribute="leading" secondItem="hkC-BL-cEs" secondAttribute="trailing" id="VKZ-1b-bsT"/>
+                                    <constraint firstItem="3uR-yk-oST" firstAttribute="top" secondItem="tEC-T1-NYg" secondAttribute="bottom" constant="-55" id="bE1-l9-EQe"/>
+                                    <constraint firstItem="tEC-T1-NYg" firstAttribute="centerX" secondItem="yTR-S8-D9j" secondAttribute="centerX" constant="23.5" id="bS8-z0-JCw"/>
                                     <constraint firstItem="3uR-yk-oST" firstAttribute="leading" secondItem="yTR-S8-D9j" secondAttribute="leading" id="bf0-Wt-g6x"/>
                                     <constraint firstAttribute="bottom" secondItem="yr6-qa-rfv" secondAttribute="bottom" id="g85-TD-Edv"/>
                                     <constraint firstAttribute="bottom" secondItem="3uR-yk-oST" secondAttribute="bottom" id="gWF-dh-tTt"/>
@@ -108,13 +119,13 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VCt-hp-Vj2" secondAttribute="trailing" id="DFN-Fi-tVf"/>
                             <constraint firstAttribute="trailing" secondItem="yTR-S8-D9j" secondAttribute="trailing" id="F7e-6r-zzV"/>
-                            <constraint firstItem="tEC-T1-NYg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GAU-l6-H2h"/>
                             <constraint firstItem="yTR-S8-D9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H90-FI-G8r"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="hkC-BL-cEs" secondAttribute="bottom" constant="19" id="Pse-RS-R3d"/>
                             <constraint firstItem="VCt-hp-Vj2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T2T-D1-7eT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yTR-S8-D9j" secondAttribute="bottom" id="YLp-Fx-1Nh"/>
                             <constraint firstItem="VCt-hp-Vj2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zmb-sw-OQB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="tEC-T1-NYg" secondAttribute="bottom" constant="15" id="dCn-vJ-md7"/>
                             <constraint firstItem="yTR-S8-D9j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dwK-z0-n4d"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tEC-T1-NYg" secondAttribute="bottom" constant="15" id="wot-yX-6nl"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -127,5 +138,6 @@
         <image name="image1" width="750" height="1334"/>
         <image name="logo" width="875" height="370"/>
         <image name="menu" width="256" height="164"/>
+        <image name="stopwatch" width="498" height="599"/>
     </resources>
 </document>
