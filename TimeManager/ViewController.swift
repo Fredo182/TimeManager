@@ -10,9 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var progressbar: MCPercentageDoughnutView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.progressbar.textStyle               = MCPercentageDoughnutViewTextStyleUserDefined;
+        self.progressbar.percentage              = 0.75;
+        self.progressbar.linePercentage          = 0.15;
+        self.progressbar.animationDuration       = 1;
+
+        self.progressbar.fillColor = UIColor(red: 15.0/255, green: 57.0/255, blue: 119.0/255, alpha: 1.0);
+        self.progressbar.roundedBackgroundImage = UIImage(named: "center");
+        self.progressbar.roundedImageOverlapPercentage = 0.08;
+        
+        self.progressbar.unfillColor = UIColor .clearColor();
+        self.progressbar.showTextLabel           = true;
+        self.progressbar.animatesBegining        = true;
     }
 
     override func didReceiveMemoryWarning() {

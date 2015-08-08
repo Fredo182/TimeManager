@@ -19,6 +19,7 @@
 		0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BF1B75F3CF00384B33 /* MCPercentageDoughnutView.m */; };
 		0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */; };
 		0731D8C81B75F3CF00384B33 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C31B75F3CF00384B33 /* MCUtil.m */; };
+		07FF48DA1B76A94D00B2881C /* documentation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07FF48D91B76A94D00B2881C /* documentation.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSliceLayer.m; sourceTree = "<group>"; };
 		0731D8C21B75F3CF00384B33 /* MCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUtil.h; sourceTree = "<group>"; };
 		0731D8C31B75F3CF00384B33 /* MCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtil.m; sourceTree = "<group>"; };
+		07FF48D91B76A94D00B2881C /* documentation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = documentation.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		0731D8B61B75F3B600384B33 /* ProgressBar */ = {
 			isa = PBXGroup;
 			children = (
+				07FF48D91B76A94D00B2881C /* documentation.txt */,
 				0731D8B81B75F3CF00384B33 /* MCCore.h */,
 				0731D8B91B75F3CF00384B33 /* MCNewCustomLayer.h */,
 				0731D8BA1B75F3CF00384B33 /* MCNewCustomLayer.m */,
@@ -171,6 +174,7 @@
 				07038F6A1B75BC7500D419B9 /* OSP-DIN.ttf in Resources */,
 				07038F5D1B758F7A00D419B9 /* Assets.xcassets in Resources */,
 				07038F581B758F7A00D419B9 /* Main.storyboard in Resources */,
+				07FF48DA1B76A94D00B2881C /* documentation.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

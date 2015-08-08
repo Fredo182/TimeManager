@@ -52,9 +52,9 @@
                                             <constraint firstAttribute="width" constant="47" id="UHT-ce-AMa"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3d-80-crq">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3d-80-crq" customClass="MCPercentageDoughnutView">
                                         <rect key="frame" x="45" y="85" width="511" height="252"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="252" id="dKt-PB-ogh"/>
                                         </constraints>
@@ -126,6 +126,9 @@
                             <constraint firstItem="D3d-80-crq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="rJR-4Q-Z8X"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressbar" destination="D3d-80-crq" id="CE9-TX-3cL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
