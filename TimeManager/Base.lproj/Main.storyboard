@@ -96,32 +96,29 @@
                                         <state key="normal" image="menu"/>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Coq-GR-B7L">
-                                        <rect key="frame" x="117" y="25" width="325" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="mhd-t9-taU"/>
-                                        </constraints>
+                                        <rect key="frame" x="-137" y="25" width="875" height="31"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.054901960784313725" green="0.16078431372549021" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Lkh-Cc-NLC" firstAttribute="top" secondItem="VCt-hp-Vj2" secondAttribute="top" constant="36" id="7U4-C2-Q06"/>
                                     <constraint firstItem="Lkh-Cc-NLC" firstAttribute="leading" secondItem="VCt-hp-Vj2" secondAttribute="leading" constant="20" id="P59-JI-cc9"/>
-                                    <constraint firstItem="Coq-GR-B7L" firstAttribute="top" secondItem="VCt-hp-Vj2" secondAttribute="top" constant="25" id="T7Y-0z-AUE"/>
-                                    <constraint firstItem="x4M-Hv-SM6" firstAttribute="leading" secondItem="Coq-GR-B7L" secondAttribute="trailing" constant="103" id="Tnf-KD-Irc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Coq-GR-B7L" secondAttribute="bottom" constant="14" id="WE0-Ic-WoW"/>
                                     <constraint firstAttribute="trailing" secondItem="x4M-Hv-SM6" secondAttribute="trailing" constant="20" id="Yt9-gm-DXo"/>
                                     <constraint firstAttribute="height" constant="70" id="h0i-5f-baQ"/>
-                                    <constraint firstItem="Coq-GR-B7L" firstAttribute="leading" secondItem="Lkh-Cc-NLC" secondAttribute="trailing" constant="62" id="zVd-NS-Sjv"/>
                                     <constraint firstItem="x4M-Hv-SM6" firstAttribute="top" secondItem="VCt-hp-Vj2" secondAttribute="top" constant="36" id="zlh-aM-8Xx"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Coq-GR-B7L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="98U-JC-liR"/>
                             <constraint firstAttribute="trailing" secondItem="VCt-hp-Vj2" secondAttribute="trailing" id="DFN-Fi-tVf"/>
                             <constraint firstAttribute="trailing" secondItem="yTR-S8-D9j" secondAttribute="trailing" id="F7e-6r-zzV"/>
                             <constraint firstItem="yTR-S8-D9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H90-FI-G8r"/>
                             <constraint firstAttribute="bottomMargin" secondItem="hkC-BL-cEs" secondAttribute="bottom" constant="19" id="Pse-RS-R3d"/>
                             <constraint firstItem="VCt-hp-Vj2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T2T-D1-7eT"/>
+                            <constraint firstItem="Coq-GR-B7L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="25" id="YF1-Gd-dJ4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yTR-S8-D9j" secondAttribute="bottom" id="YLp-Fx-1Nh"/>
                             <constraint firstItem="VCt-hp-Vj2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zmb-sw-OQB"/>
                             <constraint firstAttribute="bottomMargin" secondItem="tEC-T1-NYg" secondAttribute="bottom" constant="15" id="dCn-vJ-md7"/>
