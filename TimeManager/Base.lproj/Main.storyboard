@@ -28,15 +28,9 @@
                                     <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="whd-JE-xbI">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yr6-qa-rfv">
-                                        <rect key="frame" x="0.0" y="530" width="600" height="70"/>
-                                        <color key="backgroundColor" red="0.054901960780000002" green="0.16078431369999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="HZW-k1-IXS"/>
-                                        </constraints>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uR-yk-oST">
                                         <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                                        <color key="backgroundColor" red="0.054901960780000002" green="0.16078431369999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Cww-7N-eVE"/>
                                         </constraints>
@@ -58,6 +52,13 @@
                                             <constraint firstAttribute="width" constant="47" id="UHT-ce-AMa"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3d-80-crq">
+                                        <rect key="frame" x="45" y="85" width="511" height="252"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="252" id="dKt-PB-ogh"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -70,10 +71,7 @@
                                     <constraint firstItem="3uR-yk-oST" firstAttribute="top" secondItem="tEC-T1-NYg" secondAttribute="bottom" constant="-55" id="bE1-l9-EQe"/>
                                     <constraint firstItem="tEC-T1-NYg" firstAttribute="centerX" secondItem="yTR-S8-D9j" secondAttribute="centerX" constant="23.5" id="bS8-z0-JCw"/>
                                     <constraint firstItem="3uR-yk-oST" firstAttribute="leading" secondItem="yTR-S8-D9j" secondAttribute="leading" id="bf0-Wt-g6x"/>
-                                    <constraint firstAttribute="bottom" secondItem="yr6-qa-rfv" secondAttribute="bottom" id="g85-TD-Edv"/>
                                     <constraint firstAttribute="bottom" secondItem="3uR-yk-oST" secondAttribute="bottom" id="gWF-dh-tTt"/>
-                                    <constraint firstAttribute="trailing" secondItem="yr6-qa-rfv" secondAttribute="trailing" id="j3N-c5-IBc"/>
-                                    <constraint firstItem="yr6-qa-rfv" firstAttribute="leading" secondItem="yTR-S8-D9j" secondAttribute="leading" id="ndh-fF-sUd"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCt-hp-Vj2">
@@ -112,7 +110,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="D3d-80-crq" firstAttribute="top" secondItem="VCt-hp-Vj2" secondAttribute="bottom" constant="15" id="6mA-jA-r16"/>
                             <constraint firstItem="Coq-GR-B7L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="98U-JC-liR"/>
+                            <constraint firstAttribute="trailing" secondItem="D3d-80-crq" secondAttribute="trailing" constant="44" id="AB9-3h-zFg"/>
                             <constraint firstAttribute="trailing" secondItem="VCt-hp-Vj2" secondAttribute="trailing" id="DFN-Fi-tVf"/>
                             <constraint firstAttribute="trailing" secondItem="yTR-S8-D9j" secondAttribute="trailing" id="F7e-6r-zzV"/>
                             <constraint firstItem="yTR-S8-D9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H90-FI-G8r"/>
@@ -123,6 +123,7 @@
                             <constraint firstItem="VCt-hp-Vj2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zmb-sw-OQB"/>
                             <constraint firstAttribute="bottomMargin" secondItem="tEC-T1-NYg" secondAttribute="bottom" constant="15" id="dCn-vJ-md7"/>
                             <constraint firstItem="yTR-S8-D9j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dwK-z0-n4d"/>
+                            <constraint firstItem="D3d-80-crq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="rJR-4Q-Z8X"/>
                         </constraints>
                     </view>
                 </viewController>

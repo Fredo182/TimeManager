@@ -14,6 +14,11 @@
 		07038F5D1B758F7A00D419B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07038F5C1B758F7A00D419B9 /* Assets.xcassets */; };
 		07038F601B758F7A00D419B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07038F5E1B758F7A00D419B9 /* LaunchScreen.storyboard */; };
 		07038F6A1B75BC7500D419B9 /* OSP-DIN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07038F691B75BC7500D419B9 /* OSP-DIN.ttf */; };
+		0731D8C41B75F3CF00384B33 /* MCNewCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BA1B75F3CF00384B33 /* MCNewCustomLayer.m */; };
+		0731D8C51B75F3CF00384B33 /* MCNewCustomLayeredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BC1B75F3CF00384B33 /* MCNewCustomLayeredView.m */; };
+		0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BF1B75F3CF00384B33 /* MCPercentageDoughnutView.m */; };
+		0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */; };
+		0731D8C81B75F3CF00384B33 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C31B75F3CF00384B33 /* MCUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,19 @@
 		07038F5F1B758F7A00D419B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07038F611B758F7A00D419B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07038F691B75BC7500D419B9 /* OSP-DIN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OSP-DIN.ttf"; sourceTree = "<group>"; };
+		0731D8B71B75F3CF00384B33 /* TimeManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		0731D8B81B75F3CF00384B33 /* MCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCore.h; sourceTree = "<group>"; };
+		0731D8B91B75F3CF00384B33 /* MCNewCustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayer.h; sourceTree = "<group>"; };
+		0731D8BA1B75F3CF00384B33 /* MCNewCustomLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNewCustomLayer.m; sourceTree = "<group>"; };
+		0731D8BB1B75F3CF00384B33 /* MCNewCustomLayeredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayeredView.h; sourceTree = "<group>"; };
+		0731D8BC1B75F3CF00384B33 /* MCNewCustomLayeredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNewCustomLayeredView.m; sourceTree = "<group>"; };
+		0731D8BD1B75F3CF00384B33 /* MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h"; sourceTree = "<group>"; };
+		0731D8BE1B75F3CF00384B33 /* MCPercentageDoughnutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCPercentageDoughnutView.h; sourceTree = "<group>"; };
+		0731D8BF1B75F3CF00384B33 /* MCPercentageDoughnutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPercentageDoughnutView.m; sourceTree = "<group>"; };
+		0731D8C01B75F3CF00384B33 /* MCSliceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSliceLayer.h; sourceTree = "<group>"; };
+		0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSliceLayer.m; sourceTree = "<group>"; };
+		0731D8C21B75F3CF00384B33 /* MCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUtil.h; sourceTree = "<group>"; };
+		0731D8C31B75F3CF00384B33 /* MCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +60,7 @@
 		07038F461B758F7A00D419B9 = {
 			isa = PBXGroup;
 			children = (
+				0731D8B61B75F3B600384B33 /* ProgressBar */,
 				07038F511B758F7A00D419B9 /* TimeManager */,
 				07038F501B758F7A00D419B9 /* Products */,
 			);
@@ -70,6 +89,26 @@
 			path = TimeManager;
 			sourceTree = "<group>";
 		};
+		0731D8B61B75F3B600384B33 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				0731D8B81B75F3CF00384B33 /* MCCore.h */,
+				0731D8B91B75F3CF00384B33 /* MCNewCustomLayer.h */,
+				0731D8BA1B75F3CF00384B33 /* MCNewCustomLayer.m */,
+				0731D8BB1B75F3CF00384B33 /* MCNewCustomLayeredView.h */,
+				0731D8BC1B75F3CF00384B33 /* MCNewCustomLayeredView.m */,
+				0731D8BD1B75F3CF00384B33 /* MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h */,
+				0731D8BE1B75F3CF00384B33 /* MCPercentageDoughnutView.h */,
+				0731D8BF1B75F3CF00384B33 /* MCPercentageDoughnutView.m */,
+				0731D8C01B75F3CF00384B33 /* MCSliceLayer.h */,
+				0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */,
+				0731D8C21B75F3CF00384B33 /* MCUtil.h */,
+				0731D8C31B75F3CF00384B33 /* MCUtil.m */,
+				0731D8B71B75F3CF00384B33 /* TimeManager-Bridging-Header.h */,
+			);
+			name = ProgressBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,6 +135,7 @@
 		07038F471B758F7A00D419B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Alfredo Castillo";
 				TargetAttributes = {
@@ -142,8 +182,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				07038F551B758F7A00D419B9 /* ViewController.swift in Sources */,
+				0731D8C81B75F3CF00384B33 /* MCUtil.m in Sources */,
+				0731D8C51B75F3CF00384B33 /* MCNewCustomLayeredView.m in Sources */,
+				0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */,
 				07038F531B758F7A00D419B9 /* AppDelegate.swift in Sources */,
 				07038F5B1B758F7A00D419B9 /* TimeManager.xcdatamodeld in Sources */,
+				0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */,
+				0731D8C41B75F3CF00384B33 /* MCNewCustomLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,10 +301,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TimeManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FredoCastillo.TimeManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimeManager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -267,10 +315,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TimeManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FredoCastillo.TimeManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimeManager-Bridging-Header.h";
 			};
 			name = Release;
 		};
