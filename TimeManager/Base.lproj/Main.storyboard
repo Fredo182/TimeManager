@@ -62,8 +62,12 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDM-55-oFg">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="charge" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-SI-vu9">
-                                                        <rect key="frame" x="112" y="14" width="50" height="25"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="KgV-Cd-NeX">
+                                                        <rect key="frame" x="490" y="14" width="50" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="h8P-dV-34V"/>
+                                                            <constraint firstAttribute="width" constant="50" id="m6E-Uw-zvb"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="project" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-Kf-UtE">
                                                         <rect key="frame" x="262" y="14" width="77" height="25"/>
@@ -71,14 +75,22 @@
                                                             <constraint firstAttribute="height" constant="25" id="sZC-IB-Bzj"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="KgV-Cd-NeX">
-                                                        <rect key="frame" x="424" y="14" width="50" height="25"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charge" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-SI-vu9">
+                                                        <rect key="frame" x="60" y="14" width="50" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="4KT-Gz-KcJ"/>
+                                                            <constraint firstAttribute="width" constant="50" id="wiX-C0-Ujk"/>
+                                                        </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="CaM-Kf-UtE" firstAttribute="top" secondItem="MDM-55-oFg" secondAttribute="top" constant="14" id="OaN-lR-604"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KgV-Cd-NeX" secondAttribute="trailing" constant="60" id="R5Q-0p-oQZ"/>
+                                                    <constraint firstItem="cQ2-SI-vu9" firstAttribute="leading" secondItem="MDM-55-oFg" secondAttribute="leading" constant="60" id="U2P-T0-347"/>
                                                     <constraint firstItem="CaM-Kf-UtE" firstAttribute="centerX" secondItem="MDM-55-oFg" secondAttribute="centerX" id="bv9-3v-cbT"/>
+                                                    <constraint firstItem="cQ2-SI-vu9" firstAttribute="top" secondItem="MDM-55-oFg" secondAttribute="top" constant="14" id="gZO-x1-Qqe"/>
+                                                    <constraint firstItem="KgV-Cd-NeX" firstAttribute="top" secondItem="MDM-55-oFg" secondAttribute="top" constant="14" id="vIb-uQ-00k"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
