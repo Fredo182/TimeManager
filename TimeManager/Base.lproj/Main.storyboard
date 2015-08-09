@@ -53,10 +53,10 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3d-80-crq" customClass="MCPercentageDoughnutView">
-                                        <rect key="frame" x="45" y="85" width="511" height="252"/>
+                                        <rect key="frame" x="20" y="100" width="560" height="270"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="252" id="dKt-PB-ogh"/>
+                                            <constraint firstAttribute="height" constant="270" id="dKt-PB-ogh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -110,9 +110,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="D3d-80-crq" firstAttribute="top" secondItem="VCt-hp-Vj2" secondAttribute="bottom" constant="15" id="6mA-jA-r16"/>
+                            <constraint firstItem="D3d-80-crq" firstAttribute="top" secondItem="VCt-hp-Vj2" secondAttribute="bottom" constant="30" id="6mA-jA-r16"/>
                             <constraint firstItem="Coq-GR-B7L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="98U-JC-liR"/>
-                            <constraint firstAttribute="trailing" secondItem="D3d-80-crq" secondAttribute="trailing" constant="44" id="AB9-3h-zFg"/>
+                            <constraint firstAttribute="trailing" secondItem="D3d-80-crq" secondAttribute="trailing" constant="20" id="AB9-3h-zFg"/>
                             <constraint firstAttribute="trailing" secondItem="VCt-hp-Vj2" secondAttribute="trailing" id="DFN-Fi-tVf"/>
                             <constraint firstAttribute="trailing" secondItem="yTR-S8-D9j" secondAttribute="trailing" id="F7e-6r-zzV"/>
                             <constraint firstItem="yTR-S8-D9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H90-FI-G8r"/>
@@ -123,7 +123,7 @@
                             <constraint firstItem="VCt-hp-Vj2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zmb-sw-OQB"/>
                             <constraint firstAttribute="bottomMargin" secondItem="tEC-T1-NYg" secondAttribute="bottom" constant="15" id="dCn-vJ-md7"/>
                             <constraint firstItem="yTR-S8-D9j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dwK-z0-n4d"/>
-                            <constraint firstItem="D3d-80-crq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="rJR-4Q-Z8X"/>
+                            <constraint firstItem="D3d-80-crq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="rJR-4Q-Z8X"/>
                         </constraints>
                     </view>
                     <connections>
