@@ -58,6 +58,20 @@
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKK-ob-8n9">
                                         <rect key="frame" x="0.0" y="325" width="600" height="80"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDM-55-oFg">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="MDM-55-oFg" firstAttribute="centerY" secondItem="sKK-ob-8n9" secondAttribute="centerY" id="AcH-ea-m3g"/>
+                                            <constraint firstAttribute="bottom" secondItem="MDM-55-oFg" secondAttribute="bottom" id="Lf2-NX-SwU"/>
+                                            <constraint firstItem="MDM-55-oFg" firstAttribute="centerX" secondItem="sKK-ob-8n9" secondAttribute="centerX" id="MXM-ef-HGA"/>
+                                            <constraint firstItem="MDM-55-oFg" firstAttribute="top" secondItem="sKK-ob-8n9" secondAttribute="top" id="Tma-8G-VUq"/>
+                                            <constraint firstAttribute="trailing" secondItem="MDM-55-oFg" secondAttribute="trailing" id="gAY-ax-Dpi"/>
+                                            <constraint firstItem="MDM-55-oFg" firstAttribute="leading" secondItem="sKK-ob-8n9" secondAttribute="leading" id="mJA-p1-3yz"/>
+                                        </constraints>
                                     </scrollView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXn-OS-nmN">
                                         <rect key="frame" x="0.0" y="419" width="600" height="103"/>

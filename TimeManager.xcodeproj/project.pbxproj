@@ -14,6 +14,7 @@
 		07038F5D1B758F7A00D419B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07038F5C1B758F7A00D419B9 /* Assets.xcassets */; };
 		07038F601B758F7A00D419B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07038F5E1B758F7A00D419B9 /* LaunchScreen.storyboard */; };
 		07038F6A1B75BC7500D419B9 /* OSP-DIN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07038F691B75BC7500D419B9 /* OSP-DIN.ttf */; };
+		0721338B1B779BE0006BBA58 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721338A1B779BE0006BBA58 /* Project.swift */; };
 		0731D8C41B75F3CF00384B33 /* MCNewCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BA1B75F3CF00384B33 /* MCNewCustomLayer.m */; };
 		0731D8C51B75F3CF00384B33 /* MCNewCustomLayeredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BC1B75F3CF00384B33 /* MCNewCustomLayeredView.m */; };
 		0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BF1B75F3CF00384B33 /* MCPercentageDoughnutView.m */; };
@@ -32,6 +33,7 @@
 		07038F5F1B758F7A00D419B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07038F611B758F7A00D419B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07038F691B75BC7500D419B9 /* OSP-DIN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OSP-DIN.ttf"; sourceTree = "<group>"; };
+		0721338A1B779BE0006BBA58 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		0731D8B71B75F3CF00384B33 /* TimeManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		0731D8B81B75F3CF00384B33 /* MCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCore.h; sourceTree = "<group>"; };
 		0731D8B91B75F3CF00384B33 /* MCNewCustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayer.h; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		07038F461B758F7A00D419B9 = {
 			isa = PBXGroup;
 			children = (
+				072133891B779B5D006BBA58 /* Classes */,
 				0731D8B61B75F3B600384B33 /* ProgressBar */,
 				07038F511B758F7A00D419B9 /* TimeManager */,
 				07038F501B758F7A00D419B9 /* Products */,
@@ -89,6 +92,14 @@
 				07038F591B758F7A00D419B9 /* TimeManager.xcdatamodeld */,
 			);
 			path = TimeManager;
+			sourceTree = "<group>";
+		};
+		072133891B779B5D006BBA58 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0721338A1B779BE0006BBA58 /* Project.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		0731D8B61B75F3B600384B33 /* ProgressBar */ = {
@@ -193,6 +204,7 @@
 				07038F5B1B758F7A00D419B9 /* TimeManager.xcdatamodeld in Sources */,
 				0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */,
 				0731D8C41B75F3CF00384B33 /* MCNewCustomLayer.m in Sources */,
+				0721338B1B779BE0006BBA58 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
