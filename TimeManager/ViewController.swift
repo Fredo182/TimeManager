@@ -20,13 +20,13 @@ class ViewController: UIViewController {
         self.progressbar.textStyle               = MCPercentageDoughnutViewTextStyleUserDefined;
         self.progressbar.percentage              = 0.75;
         self.progressbar.linePercentage          = 0.15;
-        self.progressbar.animationDuration       = 1;
+        self.progressbar.animationDuration       = 1.5;
 
         self.progressbar.fillColor = UIColor(red: 15.0/255, green: 57.0/255, blue: 119.0/255, alpha: 1.0);
         self.progressbar.roundedBackgroundImage = UIImage(named: "center");
-        self.progressbar.roundedImageOverlapPercentage = 0.08;
+        self.progressbar.roundedImageOverlapPercentage = 0.04;
         
-        self.progressbar.unfillColor = UIColor .clearColor();
+        self.progressbar.unfillColor = UIColor(red: 120.0/255, green: 120.0/255, blue: 120.0/255, alpha: 1.0);
         self.progressbar.showTextLabel           = true;
         self.progressbar.animatesBegining        = true;
     }
