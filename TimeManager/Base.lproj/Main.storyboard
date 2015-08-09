@@ -53,17 +53,15 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3d-80-crq" customClass="MCPercentageDoughnutView">
-                                        <rect key="frame" x="20" y="100" width="560" height="270"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="270" id="dKt-PB-ogh"/>
-                                        </constraints>
+                                        <rect key="frame" x="20" y="100" width="560" height="210"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="whd-JE-xbI" secondAttribute="bottom" id="81j-nD-5sx"/>
                                     <constraint firstItem="whd-JE-xbI" firstAttribute="leading" secondItem="yTR-S8-D9j" secondAttribute="leading" id="AFa-VC-Wtk"/>
+                                    <constraint firstItem="3uR-yk-oST" firstAttribute="top" secondItem="D3d-80-crq" secondAttribute="bottom" constant="220" id="Gu9-FT-vd1"/>
                                     <constraint firstItem="whd-JE-xbI" firstAttribute="top" secondItem="yTR-S8-D9j" secondAttribute="top" id="RIm-B7-uWv"/>
                                     <constraint firstAttribute="trailing" secondItem="3uR-yk-oST" secondAttribute="trailing" id="S35-Ra-zzY"/>
                                     <constraint firstAttribute="trailing" secondItem="whd-JE-xbI" secondAttribute="trailing" id="S4m-oN-drI"/>

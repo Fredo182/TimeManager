@@ -29,6 +29,10 @@ class ViewController: UIViewController {
         self.progressbar.unfillColor = UIColor(red: 120.0/255, green: 120.0/255, blue: 120.0/255, alpha: 1.0);
         self.progressbar.showTextLabel           = true;
         self.progressbar.animatesBegining        = true;
+        
+        self.progressbar.textLabel.textColor     = UIColor.whiteColor();
+        self.progressbar.textLabel.text          = "9.5";
+        self.progressbar.textLabel.font          = UIFont(name: "OSP-DIN", size: 150);
     }
 
     override func didReceiveMemoryWarning() {
