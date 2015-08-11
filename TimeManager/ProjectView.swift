@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ProjectView: UIView {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+class ProjectView: NibDesignable {
+    
+    @IBOutlet weak var chargeImage: UIImageView!
+    @IBOutlet weak var timeImage: UIImageView!
+    @IBOutlet weak var projectImage: UIImageView!
+    
+    @IBOutlet weak var chargeLabel: UILabel!
+    @IBOutlet weak var projectLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
 }

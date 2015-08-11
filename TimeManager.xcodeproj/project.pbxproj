@@ -22,6 +22,7 @@
 		0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BF1B75F3CF00384B33 /* MCPercentageDoughnutView.m */; };
 		0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */; };
 		0731D8C81B75F3CF00384B33 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C31B75F3CF00384B33 /* MCUtil.m */; };
+		07B432111B798E5A0085D9BC /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B4320E1B798E5A0085D9BC /* NibDesignable.swift */; };
 		07FF48DA1B76A94D00B2881C /* documentation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07FF48D91B76A94D00B2881C /* documentation.txt */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSliceLayer.m; sourceTree = "<group>"; };
 		0731D8C21B75F3CF00384B33 /* MCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUtil.h; sourceTree = "<group>"; };
 		0731D8C31B75F3CF00384B33 /* MCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtil.m; sourceTree = "<group>"; };
+		07B4320E1B798E5A0085D9BC /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDesignable.swift; sourceTree = "<group>"; };
 		07FF48D91B76A94D00B2881C /* documentation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = documentation.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 		07038F511B758F7A00D419B9 /* TimeManager */ = {
 			isa = PBXGroup;
 			children = (
+				07B4320E1B798E5A0085D9BC /* NibDesignable.swift */,
 				07038F691B75BC7500D419B9 /* OSP-DIN.ttf */,
 				07038F521B758F7A00D419B9 /* AppDelegate.swift */,
 				07038F541B758F7A00D419B9 /* ViewController.swift */,
@@ -211,6 +214,7 @@
 				07038F531B758F7A00D419B9 /* AppDelegate.swift in Sources */,
 				07038F5B1B758F7A00D419B9 /* TimeManager.xcdatamodeld in Sources */,
 				0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */,
+				07B432111B798E5A0085D9BC /* NibDesignable.swift in Sources */,
 				0731D8C41B75F3CF00384B33 /* MCNewCustomLayer.m in Sources */,
 				0721338B1B779BE0006BBA58 /* Project.swift in Sources */,
 			);

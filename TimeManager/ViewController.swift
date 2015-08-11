@@ -17,7 +17,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let width = self.view.frame.width
+        let p = ProjectView(frame:CGRectMake(0, 0,width, 80))
         
+        
+        self.view.addSubview(p)
         
         
         

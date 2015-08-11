@@ -11,7 +11,16 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectView" customModule="TimeManager" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectView" customModule="TimeManager" customModuleProvider="target">
+            <connections>
+                <outlet property="chargeImage" destination="v7B-iY-f4b" id="EnP-8Q-QrP"/>
+                <outlet property="chargeLabel" destination="Und-2g-Hpa" id="LZS-5D-Gc8"/>
+                <outlet property="projectImage" destination="dnz-Fl-eBI" id="Uzk-Oc-PXt"/>
+                <outlet property="projectLabel" destination="Apq-6e-SaG" id="eUL-CI-6oj"/>
+                <outlet property="timeImage" destination="5vb-C1-nIY" id="LsL-u1-Muk"/>
+                <outlet property="timeLabel" destination="EJJ-pB-iHf" id="3iS-Ma-hps"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
