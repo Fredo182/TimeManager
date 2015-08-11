@@ -59,7 +59,7 @@
                                         <rect key="frame" x="20" y="100" width="560" height="210"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKK-ob-8n9">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKK-ob-8n9">
                                         <rect key="frame" x="0.0" y="325" width="600" height="80"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDM-55-oFg">
@@ -208,6 +208,7 @@
                     </view>
                     <connections>
                         <outlet property="progressbar" destination="D3d-80-crq" id="CE9-TX-3cL"/>
+                        <outlet property="projectScrollView" destination="sKK-ob-8n9" id="7p3-4g-UAP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

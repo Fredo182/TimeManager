@@ -15,6 +15,8 @@
 		07038F601B758F7A00D419B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07038F5E1B758F7A00D419B9 /* LaunchScreen.storyboard */; };
 		07038F6A1B75BC7500D419B9 /* OSP-DIN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07038F691B75BC7500D419B9 /* OSP-DIN.ttf */; };
 		0721338B1B779BE0006BBA58 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721338A1B779BE0006BBA58 /* Project.swift */; };
+		07228EC01B7980BC007FD9BA /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07228EBF1B7980BC007FD9BA /* ProjectView.swift */; };
+		07228EC21B7980F8007FD9BA /* ProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07228EC11B7980F8007FD9BA /* ProjectView.xib */; };
 		0731D8C41B75F3CF00384B33 /* MCNewCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BA1B75F3CF00384B33 /* MCNewCustomLayer.m */; };
 		0731D8C51B75F3CF00384B33 /* MCNewCustomLayeredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BC1B75F3CF00384B33 /* MCNewCustomLayeredView.m */; };
 		0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BF1B75F3CF00384B33 /* MCPercentageDoughnutView.m */; };
@@ -34,6 +36,8 @@
 		07038F611B758F7A00D419B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07038F691B75BC7500D419B9 /* OSP-DIN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OSP-DIN.ttf"; sourceTree = "<group>"; };
 		0721338A1B779BE0006BBA58 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		07228EBF1B7980BC007FD9BA /* ProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		07228EC11B7980F8007FD9BA /* ProjectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectView.xib; sourceTree = "<group>"; };
 		0731D8B71B75F3CF00384B33 /* TimeManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		0731D8B81B75F3CF00384B33 /* MCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCore.h; sourceTree = "<group>"; };
 		0731D8B91B75F3CF00384B33 /* MCNewCustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayer.h; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				07038F5E1B758F7A00D419B9 /* LaunchScreen.storyboard */,
 				07038F611B758F7A00D419B9 /* Info.plist */,
 				07038F591B758F7A00D419B9 /* TimeManager.xcdatamodeld */,
+				07228EBF1B7980BC007FD9BA /* ProjectView.swift */,
+				07228EC11B7980F8007FD9BA /* ProjectView.xib */,
 			);
 			path = TimeManager;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07228EC21B7980F8007FD9BA /* ProjectView.xib in Resources */,
 				07038F601B758F7A00D419B9 /* LaunchScreen.storyboard in Resources */,
 				07038F6A1B75BC7500D419B9 /* OSP-DIN.ttf in Resources */,
 				07038F5D1B758F7A00D419B9 /* Assets.xcassets in Resources */,
@@ -198,6 +205,7 @@
 			files = (
 				07038F551B758F7A00D419B9 /* ViewController.swift in Sources */,
 				0731D8C81B75F3CF00384B33 /* MCUtil.m in Sources */,
+				07228EC01B7980BC007FD9BA /* ProjectView.swift in Sources */,
 				0731D8C51B75F3CF00384B33 /* MCNewCustomLayeredView.m in Sources */,
 				0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */,
 				07038F531B758F7A00D419B9 /* AppDelegate.swift in Sources */,
