@@ -17,36 +17,38 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let width = self.view.frame.size.width
-        print("Screen size width: \(self.view.frame.size.width)")
+        let screenwidth = self.view.frame.size.width
         
-        self.projectScrollView.frame.size.width = width
+        self.projectScrollView.frame.size.width = screenwidth
         self.projectScrollView.frame.size.height = 80
         
+        let pview1 = ProjectView(frame:CGRectMake(0, 0,screenwidth, 80))
+        self.projectScrollView.addSubview(pview1);
         
-        let p = ProjectView(frame:CGRectMake(0, 0,width, 80))
-        self.projectScrollView.addSubview(p);
+        let pview2 = ProjectView(frame: CGRectMake(0, 0, screenwidth, 80))
+        var frame = pview1.frame
+        frame.origin.x = screenwidth
+        pview2.frame = frame
         
-        let p1 = ProjectView(frame: CGRectMake(0, 0, width, 80))
-        var frame1 = p.frame
-        frame1.origin.x = width
-        p1.frame = frame1
+        pview2.chargeLabel.text = "AWWW00135"
+        pview2.projectLabel.text = "SVMS"
+        pview2.timeLabel.text = "3.2"
         
-        self.projectScrollView.addSubview(p1)
+        self.projectScrollView.addSubview(pview2)
         
-        self.projectScrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2, self.projectScrollView.frame.size.height)
-        self.projectScrollView.scrollEnabled = true;
+        let pview3 = ProjectView(frame: CGRectMake(0, 0, screenwidth, 80))
+        frame.origin.x = screenwidth * 2
+        pview3.frame = frame
+        
+        pview3.chargeLabel.text = "EBS500043"
+        pview3.projectLabel.text = "MOB"
+        pview3.timeLabel.text = "1.2"
+        
+        self.projectScrollView.addSubview(pview3)
         
         
-        print("Scroll view: width=\(self.projectScrollView.frame.size.width) height=\(self.projectScrollView.frame.size.height)")
-        print("Scroll view: content size width=\(self.projectScrollView.contentSize.width)")
-        print("Scroll view: content size height=\(self.projectScrollView.contentSize.height)")
-        
-        print("ProjectView 1: width=\(p.frame.size.width) height=\(p.frame.size.height)")
-        print("ProjectView 1: x=\(p.frame.origin.x) y=\(p.frame.origin.y)")
+        self.projectScrollView.contentSize = CGSizeMake(screenwidth * 3, self.projectScrollView.frame.size.height)
 
-        print("ProjectView 2: width=\(p1.frame.size.width) height=\(p1.frame.size.height)")
-        print("ProjectView 2: x=\(p1.frame.origin.x) y=\(p1.frame.origin.y)")
 
         
         // Do any additional setup after loading the view, typically from a nib.
