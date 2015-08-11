@@ -7,9 +7,6 @@
     <customFonts key="customFonts">
         <mutableArray key="OSP-DIN.ttf">
             <string>OSP-DIN</string>
-            <string>OSP-DIN</string>
-            <string>OSP-DIN</string>
-            <string>OSP-DIN</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -59,73 +56,8 @@
                                         <rect key="frame" x="20" y="100" width="560" height="210"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKK-ob-8n9">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKK-ob-8n9">
                                         <rect key="frame" x="0.0" y="325" width="600" height="80"/>
-                                        <subviews>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDM-55-oFg">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="project" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-Kf-UtE">
-                                                        <rect key="frame" x="125" y="14" width="350" height="25"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charge" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-SI-vu9">
-                                                        <rect key="frame" x="20" y="14" width="105" height="25"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="KgV-Cd-NeX">
-                                                        <rect key="frame" x="475" y="14" width="105" height="25"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EW3003100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwd-c3-eWE">
-                                                        <rect key="frame" x="0.0" y="48" width="145" height="24"/>
-                                                        <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="22"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcS-D2-iWY">
-                                                        <rect key="frame" x="518" y="46" width="20" height="25"/>
-                                                        <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="22"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="AME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVn-6T-9Ri">
-                                                        <rect key="frame" x="200" y="48" width="200" height="24"/>
-                                                        <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="22"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="KgV-Cd-NeX" secondAttribute="bottom" constant="41" id="0gW-6x-CGf"/>
-                                                    <constraint firstItem="Fwd-c3-eWE" firstAttribute="centerX" secondItem="cQ2-SI-vu9" secondAttribute="centerX" id="7DQ-RJ-cdK"/>
-                                                    <constraint firstItem="KgV-Cd-NeX" firstAttribute="top" secondItem="MDM-55-oFg" secondAttribute="top" constant="14" id="9SN-Qc-O9Z"/>
-                                                    <constraint firstItem="cQ2-SI-vu9" firstAttribute="top" secondItem="MDM-55-oFg" secondAttribute="top" constant="14" id="A5I-Hy-3CE"/>
-                                                    <constraint firstAttribute="bottom" secondItem="cQ2-SI-vu9" secondAttribute="bottom" constant="41" id="BQs-Ak-8Kx"/>
-                                                    <constraint firstItem="FVn-6T-9Ri" firstAttribute="leading" secondItem="CaM-Kf-UtE" secondAttribute="trailing" constant="-275" id="Bop-zi-3d4"/>
-                                                    <constraint firstAttribute="bottom" secondItem="FVn-6T-9Ri" secondAttribute="bottom" constant="8" id="Dg6-Gd-U06"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Fwd-c3-eWE" secondAttribute="bottom" constant="8" id="GBr-hR-p4o"/>
-                                                    <constraint firstAttribute="bottom" secondItem="WcS-D2-iWY" secondAttribute="bottom" constant="9" id="KHo-if-SB4"/>
-                                                    <constraint firstItem="CaM-Kf-UtE" firstAttribute="centerX" secondItem="MDM-55-oFg" secondAttribute="centerX" id="QJG-na-Wx4"/>
-                                                    <constraint firstAttribute="bottom" secondItem="CaM-Kf-UtE" secondAttribute="bottom" constant="41" id="SkO-EG-wGO"/>
-                                                    <constraint firstItem="WcS-D2-iWY" firstAttribute="top" secondItem="KgV-Cd-NeX" secondAttribute="bottom" constant="7" id="XmB-5g-BSR"/>
-                                                    <constraint firstItem="KgV-Cd-NeX" firstAttribute="leading" secondItem="CaM-Kf-UtE" secondAttribute="trailing" id="YNn-R3-zKu"/>
-                                                    <constraint firstItem="WcS-D2-iWY" firstAttribute="centerX" secondItem="KgV-Cd-NeX" secondAttribute="centerX" id="aP8-wf-PkD"/>
-                                                    <constraint firstItem="CaM-Kf-UtE" firstAttribute="leading" secondItem="cQ2-SI-vu9" secondAttribute="trailing" id="lwA-0M-z6F"/>
-                                                    <constraint firstItem="cQ2-SI-vu9" firstAttribute="leading" secondItem="MDM-55-oFg" secondAttribute="leading" constant="20" id="qO7-AO-hFu"/>
-                                                    <constraint firstItem="FVn-6T-9Ri" firstAttribute="centerX" secondItem="CaM-Kf-UtE" secondAttribute="centerX" id="tcf-kX-dWp"/>
-                                                    <constraint firstItem="Fwd-c3-eWE" firstAttribute="leading" secondItem="cQ2-SI-vu9" secondAttribute="trailing" constant="-125" id="w6a-sB-bst"/>
-                                                    <constraint firstItem="CaM-Kf-UtE" firstAttribute="top" secondItem="MDM-55-oFg" secondAttribute="top" constant="14" id="xB1-wS-POX"/>
-                                                    <constraint firstAttribute="trailing" secondItem="KgV-Cd-NeX" secondAttribute="trailing" constant="20" id="yT3-Uj-mPp"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="MDM-55-oFg" firstAttribute="centerY" secondItem="sKK-ob-8n9" secondAttribute="centerY" id="AcH-ea-m3g"/>
-                                            <constraint firstAttribute="bottom" secondItem="MDM-55-oFg" secondAttribute="bottom" id="Lf2-NX-SwU"/>
-                                            <constraint firstItem="MDM-55-oFg" firstAttribute="centerX" secondItem="sKK-ob-8n9" secondAttribute="centerX" id="MXM-ef-HGA"/>
-                                            <constraint firstItem="MDM-55-oFg" firstAttribute="top" secondItem="sKK-ob-8n9" secondAttribute="top" id="Tma-8G-VUq"/>
-                                            <constraint firstAttribute="trailing" secondItem="MDM-55-oFg" secondAttribute="trailing" id="gAY-ax-Dpi"/>
-                                            <constraint firstItem="MDM-55-oFg" firstAttribute="leading" secondItem="sKK-ob-8n9" secondAttribute="leading" id="mJA-p1-3yz"/>
-                                        </constraints>
                                     </scrollView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXn-OS-nmN">
                                         <rect key="frame" x="0.0" y="419" width="600" height="103"/>
@@ -217,12 +149,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="charge" width="105" height="65"/>
         <image name="image1" width="750" height="1334"/>
         <image name="logo" width="875" height="370"/>
         <image name="menu" width="256" height="164"/>
-        <image name="project" width="77" height="67"/>
         <image name="stopwatch" width="498" height="599"/>
-        <image name="time" width="66" height="65"/>
     </resources>
 </document>
