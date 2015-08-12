@@ -22,6 +22,7 @@
 		0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BF1B75F3CF00384B33 /* MCPercentageDoughnutView.m */; };
 		0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */; };
 		0731D8C81B75F3CF00384B33 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C31B75F3CF00384B33 /* MCUtil.m */; };
+		077074971B7B0E3B00C008E8 /* UIButtonScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */; };
 		07B02C7A1B79A848002EE40D /* DatesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B02C791B79A848002EE40D /* DatesView.xib */; };
 		07B02C7C1B79A86E002EE40D /* DatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B02C7B1B79A86E002EE40D /* DatesView.swift */; };
 		07B432111B798E5A0085D9BC /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B4320E1B798E5A0085D9BC /* NibDesignable.swift */; };
@@ -54,6 +55,7 @@
 		0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSliceLayer.m; sourceTree = "<group>"; };
 		0731D8C21B75F3CF00384B33 /* MCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUtil.h; sourceTree = "<group>"; };
 		0731D8C31B75F3CF00384B33 /* MCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtil.m; sourceTree = "<group>"; };
+		077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonScrollView.swift; sourceTree = "<group>"; };
 		07B02C791B79A848002EE40D /* DatesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatesView.xib; sourceTree = "<group>"; };
 		07B02C7B1B79A86E002EE40D /* DatesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesView.swift; sourceTree = "<group>"; };
 		07B4320E1B798E5A0085D9BC /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDesignable.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				07228EC11B7980F8007FD9BA /* ProjectView.xib */,
 				07B02C791B79A848002EE40D /* DatesView.xib */,
 				07B02C7B1B79A86E002EE40D /* DatesView.swift */,
+				077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */,
 			);
 			path = TimeManager;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077074971B7B0E3B00C008E8 /* UIButtonScrollView.swift in Sources */,
 				07038F551B758F7A00D419B9 /* ViewController.swift in Sources */,
 				0731D8C81B75F3CF00384B33 /* MCUtil.m in Sources */,
 				07228EC01B7980BC007FD9BA /* ProjectView.swift in Sources */,
