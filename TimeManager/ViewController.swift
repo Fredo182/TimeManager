@@ -11,13 +11,44 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    @IBOutlet var dateScrollView: UIScrollView!
     @IBOutlet var projectScrollView: UIScrollView!
     @IBOutlet weak var progressbar: MCPercentageDoughnutView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         let screenwidth = self.view.frame.size.width
+
+        /**************************************************************************************************/
+        /*       TEST DATE SCROLL VIEW                   */
+        
+        self.dateScrollView.frame.size.width = screenwidth
+        self.dateScrollView.frame.size.height = 97
+        
+        let dview1 = DatesView(frame:CGRectMake(0, 0,screenwidth, 80))
+        self.dateScrollView.addSubview(dview1)
+        
+        let dview2 = DatesView(frame:CGRectMake(0, 0,screenwidth, 80))
+        var frame1 = dview1.frame
+        frame1.origin.x = screenwidth
+        dview2.frame = frame1
+        
+        self.dateScrollView.addSubview(dview2)
+        
+        self.dateScrollView.contentSize = CGSizeMake(screenwidth * 2, self.dateScrollView.frame.size.height)
+        
+        
+        
+        /**************************************************************************************************/
+        
+        
+        
+        
+        /**************************************************************************************************/
+        /*       TEST PROJECT CHARGE SCROLL VIEW                   */
+        
         
         self.projectScrollView.frame.size.width = screenwidth
         self.projectScrollView.frame.size.height = 80
@@ -46,12 +77,16 @@ class ViewController: UIViewController {
         
         self.projectScrollView.addSubview(pview3)
         
-        
         self.projectScrollView.contentSize = CGSizeMake(screenwidth * 3, self.projectScrollView.frame.size.height)
 
-
+        /**************************************************************************************************/
         
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        
+        /**************************************************************************************************/
+        /*       TEST PROGRESS BAR VIEW                   */
         
         self.progressbar.textStyle               = MCPercentageDoughnutViewTextStyleUserDefined;
         self.progressbar.percentage              = 0.75;
@@ -69,6 +104,7 @@ class ViewController: UIViewController {
         self.progressbar.textLabel.textColor     = UIColor.whiteColor();
         self.progressbar.textLabel.text          = "9.5";
         self.progressbar.textLabel.font          = UIFont(name: "OSP-DIN", size: 150);
+        /**************************************************************************************************/
     }
 
     override func didReceiveMemoryWarning() {

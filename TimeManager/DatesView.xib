@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OSP-DIN.ttf">
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatesView" customModule="TimeManager" customModuleProvider="target">
+            <connections>
+                <outlet property="firstDateButton" destination="28e-Wf-UJz" id="Na1-Mw-aH6"/>
+                <outlet property="firstDayLabel" destination="QPl-3a-TFd" id="0gy-5k-Rlg"/>
+                <outlet property="firstMonthLabel" destination="CoY-PU-mTh" id="osQ-JA-6kB"/>
+                <outlet property="firstNumberLabel" destination="G8T-le-hdl" id="LPR-kD-60A"/>
+                <outlet property="secondDateButton" destination="AFy-pb-x7T" id="Ru7-b6-Y29"/>
+                <outlet property="secondDayLabel" destination="V5l-j1-ZQ5" id="Vs4-S1-zUt"/>
+                <outlet property="secondMonthLabel" destination="Mrn-4S-mGh" id="F5J-W2-tVp"/>
+                <outlet property="secondNumberLabel" destination="qps-6L-FqS" id="VpX-JP-adX"/>
+                <outlet property="thirdDateButton" destination="Nlh-QC-42z" id="biR-le-5Vl"/>
+                <outlet property="thirdDayLabel" destination="6X4-ZG-nAN" id="sW2-Sb-UDw"/>
+                <outlet property="thirdMonthLabel" destination="Z0y-xd-Gxs" id="P9c-o9-jbC"/>
+                <outlet property="thirdNumberLabel" destination="ZBq-WO-AoR" id="Vx8-w7-9ZX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="28e-Wf-UJz">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="97"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="97" id="9fa-ov-ZlQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="28"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoY-PU-mTh">
+                    <rect key="frame" x="0.0" y="5" width="200" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Z3A-Gd-Rre"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8T-le-hdl">
+                    <rect key="frame" x="0.0" y="36" width="200" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="hL7-Ry-qN4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPl-3a-TFd">
+                    <rect key="frame" x="0.0" y="64" width="200" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="wXz-6X-nJX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFy-pb-x7T">
+                    <rect key="frame" x="200" y="0.0" width="200" height="97"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlh-QC-42z">
+                    <rect key="frame" x="400" y="0.0" width="200" height="97"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0y-xd-Gxs">
+                    <rect key="frame" x="400" y="3" width="200" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="omp-k0-AP6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBq-WO-AoR">
+                    <rect key="frame" x="400" y="36" width="200" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="nkf-Lv-mok"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6X4-ZG-nAN">
+                    <rect key="frame" x="400" y="64" width="200" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Mrm-3g-69W"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrn-4S-mGh">
+                    <rect key="frame" x="200" y="3" width="200" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="fYb-bu-PP6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qps-6L-FqS">
+                    <rect key="frame" x="200" y="36" width="200" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="8w7-wp-Vc9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5l-j1-ZQ5">
+                    <rect key="frame" x="200" y="64" width="200" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="jPF-eY-XfO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Mrn-4S-mGh" firstAttribute="centerX" secondItem="AFy-pb-x7T" secondAttribute="centerX" id="5lq-ON-hJX"/>
+                <constraint firstItem="G8T-le-hdl" firstAttribute="top" secondItem="28e-Wf-UJz" secondAttribute="bottom" constant="-61" id="6rg-DD-wzY"/>
+                <constraint firstItem="CoY-PU-mTh" firstAttribute="baseline" secondItem="28e-Wf-UJz" secondAttribute="firstBaseline" id="6zs-Wm-O30"/>
+                <constraint firstItem="QPl-3a-TFd" firstAttribute="top" secondItem="28e-Wf-UJz" secondAttribute="bottom" constant="-33" id="9ml-TS-VpQ"/>
+                <constraint firstItem="Nlh-QC-42z" firstAttribute="leading" secondItem="AFy-pb-x7T" secondAttribute="trailing" id="AUL-Ei-F1l"/>
+                <constraint firstItem="CoY-PU-mTh" firstAttribute="leading" secondItem="28e-Wf-UJz" secondAttribute="trailing" constant="-200" id="B7S-aC-fVo"/>
+                <constraint firstItem="28e-Wf-UJz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CxR-4J-LiD"/>
+                <constraint firstItem="6X4-ZG-nAN" firstAttribute="top" secondItem="Nlh-QC-42z" secondAttribute="bottom" constant="-33" id="DX1-dS-b9V"/>
+                <constraint firstItem="Nlh-QC-42z" firstAttribute="top" secondItem="28e-Wf-UJz" secondAttribute="top" id="Gpa-uL-ESm"/>
+                <constraint firstItem="Z0y-xd-Gxs" firstAttribute="centerX" secondItem="Nlh-QC-42z" secondAttribute="centerX" id="JPc-Bn-Gzb"/>
+                <constraint firstItem="AFy-pb-x7T" firstAttribute="height" secondItem="28e-Wf-UJz" secondAttribute="height" id="OMP-Is-xYr"/>
+                <constraint firstItem="CoY-PU-mTh" firstAttribute="centerX" secondItem="28e-Wf-UJz" secondAttribute="centerX" id="UhQ-PB-P22"/>
+                <constraint firstItem="QPl-3a-TFd" firstAttribute="centerX" secondItem="28e-Wf-UJz" secondAttribute="centerX" id="Vmi-PT-T1B"/>
+                <constraint firstItem="6X4-ZG-nAN" firstAttribute="centerX" secondItem="Nlh-QC-42z" secondAttribute="centerX" id="Xei-vb-gXQ"/>
+                <constraint firstItem="Nlh-QC-42z" firstAttribute="height" secondItem="28e-Wf-UJz" secondAttribute="height" id="Y7R-p1-NWZ"/>
+                <constraint firstItem="V5l-j1-ZQ5" firstAttribute="centerX" secondItem="AFy-pb-x7T" secondAttribute="centerX" id="Zc2-ie-djn"/>
+                <constraint firstItem="ZBq-WO-AoR" firstAttribute="centerX" secondItem="Nlh-QC-42z" secondAttribute="centerX" id="fL8-Sc-d3V"/>
+                <constraint firstItem="ZBq-WO-AoR" firstAttribute="top" secondItem="Nlh-QC-42z" secondAttribute="bottom" constant="-61" id="hyr-ab-LKf"/>
+                <constraint firstItem="G8T-le-hdl" firstAttribute="centerX" secondItem="28e-Wf-UJz" secondAttribute="centerX" id="iNF-1l-GW9"/>
+                <constraint firstItem="qps-6L-FqS" firstAttribute="centerX" secondItem="AFy-pb-x7T" secondAttribute="centerX" id="jYa-5I-Ex0"/>
+                <constraint firstItem="Nlh-QC-42z" firstAttribute="top" secondItem="Z0y-xd-Gxs" secondAttribute="bottom" constant="-30" id="km8-FP-MXr"/>
+                <constraint firstItem="CoY-PU-mTh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="lT0-ui-Yu5"/>
+                <constraint firstItem="AFy-pb-x7T" firstAttribute="width" secondItem="28e-Wf-UJz" secondAttribute="width" id="lro-wX-XxY"/>
+                <constraint firstItem="V5l-j1-ZQ5" firstAttribute="top" secondItem="AFy-pb-x7T" secondAttribute="bottom" constant="-33" id="rTx-bS-S5g"/>
+                <constraint firstItem="AFy-pb-x7T" firstAttribute="leading" secondItem="28e-Wf-UJz" secondAttribute="trailing" id="s8y-QA-R6R"/>
+                <constraint firstItem="AFy-pb-x7T" firstAttribute="top" secondItem="Mrn-4S-mGh" secondAttribute="bottom" constant="-30" id="vNW-yl-8Vi"/>
+                <constraint firstItem="AFy-pb-x7T" firstAttribute="top" secondItem="Nlh-QC-42z" secondAttribute="top" id="vfS-3j-lyT"/>
+                <constraint firstItem="AFy-pb-x7T" firstAttribute="top" secondItem="28e-Wf-UJz" secondAttribute="top" id="wAz-vf-uKk"/>
+                <constraint firstItem="28e-Wf-UJz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wah-zC-Iha"/>
+                <constraint firstAttribute="trailing" secondItem="Nlh-QC-42z" secondAttribute="trailing" id="x7a-cf-YiQ"/>
+                <constraint firstItem="qps-6L-FqS" firstAttribute="top" secondItem="AFy-pb-x7T" secondAttribute="bottom" constant="-61" id="y3e-ho-HLc"/>
+                <constraint firstItem="Nlh-QC-42z" firstAttribute="width" secondItem="28e-Wf-UJz" secondAttribute="width" id="ycH-1v-NUg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="303" y="16.5"/>
+        </view>
+    </objects>
+</document>

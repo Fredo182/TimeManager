@@ -59,15 +59,15 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKK-ob-8n9">
                                         <rect key="frame" x="0.0" y="325" width="600" height="80"/>
                                     </scrollView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXn-OS-nmN">
-                                        <rect key="frame" x="0.0" y="419" width="600" height="103"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXn-OS-nmN">
+                                        <rect key="frame" x="0.0" y="419" width="600" height="97"/>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="sKK-ob-8n9" secondAttribute="bottom" constant="195" id="59I-ds-S7y"/>
                                     <constraint firstItem="sKK-ob-8n9" firstAttribute="leading" secondItem="yTR-S8-D9j" secondAttribute="leading" id="5IA-hi-5dr"/>
-                                    <constraint firstItem="3uR-yk-oST" firstAttribute="top" secondItem="GXn-OS-nmN" secondAttribute="bottom" constant="8" id="5tl-lc-qnP"/>
+                                    <constraint firstItem="3uR-yk-oST" firstAttribute="top" secondItem="GXn-OS-nmN" secondAttribute="bottom" constant="14" id="5tl-lc-qnP"/>
                                     <constraint firstAttribute="bottom" secondItem="whd-JE-xbI" secondAttribute="bottom" id="81j-nD-5sx"/>
                                     <constraint firstItem="whd-JE-xbI" firstAttribute="leading" secondItem="yTR-S8-D9j" secondAttribute="leading" id="AFa-VC-Wtk"/>
                                     <constraint firstItem="3uR-yk-oST" firstAttribute="top" secondItem="D3d-80-crq" secondAttribute="bottom" constant="220" id="Gu9-FT-vd1"/>
@@ -139,6 +139,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateScrollView" destination="GXn-OS-nmN" id="gA3-SF-pWH"/>
                         <outlet property="progressbar" destination="D3d-80-crq" id="CE9-TX-3cL"/>
                         <outlet property="projectScrollView" destination="sKK-ob-8n9" id="7p3-4g-UAP"/>
                     </connections>

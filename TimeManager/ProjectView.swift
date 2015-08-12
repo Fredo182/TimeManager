@@ -10,12 +10,12 @@ import UIKit
 
 class ProjectView: NibDesignable {
     
-    @IBOutlet weak var chargeImage: UIImageView!
-    @IBOutlet weak var timeImage: UIImageView!
-    @IBOutlet weak var projectImage: UIImageView!
+    @IBOutlet var chargeImage: UIImageView!
+    @IBOutlet var timeImage: UIImageView!
+    @IBOutlet var projectImage: UIImageView!
     
-    @IBOutlet weak var chargeLabel: UILabel!
-    @IBOutlet weak var projectLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet var chargeLabel: UILabel!
+    @IBOutlet var projectLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
     
 }
