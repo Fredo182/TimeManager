@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timestuff()
+        getDates();
         
         
         let screenwidth = self.view.frame.size.width
@@ -26,27 +26,27 @@ class ViewController: UIViewController {
         /**************************************************************************************************/
         /*       TEST DATE SCROLL VIEW                   */
         
-        self.dateScrollView.frame.size.width = screenwidth
-        self.dateScrollView.frame.size.height = 97
-        
-        let dview1 = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
-        self.dateScrollView.addSubview(dview1)
-        
-        let dview2 = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
-        var frame1 = dview1.frame
-        frame1.origin.x = screenwidth
-        dview2.frame = frame1
-        
-        dview2.firstMonthLabel.text = "Sep"
-        dview2.secondMonthLabel.text = "Sep"
-        dview2.thirdMonthLabel.text = "Sep"
-        
-        self.dateScrollView.addSubview(dview2)
-        
-        self.dateScrollView.contentSize = CGSizeMake(screenwidth * 2, self.dateScrollView.frame.size.height)
-        
-        
-        self.dateScrollView.canCancelContentTouches = true;
+//        self.dateScrollView.frame.size.width = screenwidth
+//        self.dateScrollView.frame.size.height = 97
+//        
+//        let dview1 = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
+//        self.dateScrollView.addSubview(dview1)
+//        
+//        let dview2 = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
+//        var frame1 = dview1.frame
+//        frame1.origin.x = screenwidth
+//        dview2.frame = frame1
+//        
+//        dview2.firstMonthLabel.text = "Sep"
+//        dview2.secondMonthLabel.text = "Sep"
+//        dview2.thirdMonthLabel.text = "Sep"
+//        
+//        self.dateScrollView.addSubview(dview2)
+//        
+//        self.dateScrollView.contentSize = CGSizeMake(screenwidth * 2, self.dateScrollView.frame.size.height)
+//        
+//        
+//        self.dateScrollView.canCancelContentTouches = true;
         
         
         /**************************************************************************************************/
@@ -120,19 +120,117 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func timestuff() {
+    func getDates() {
         
-        let date = NSDate()
-        print(date.currentTime())
-        print(date.shortMonth())
-        print(date.shortDate())
-        print(date.shortDay())
-        print(date.printTime())
+        // Set variables for today and array of dates
+        let today = NSDate()
+        var dates: [NSDate] = []
         
-        print("Rounded")
-        print(date.roundToSix().printTime())
+        // Get the previous 7 days starting with latest
+        for var i = 7; i > 0; i--
+        {
+            let date = today-i.day
+            dates.append(date)
+        }
         
-    
+        // Append today in the middle of array
+        dates.append(today)
+        
+        // Get the next 7 days starting with earliest
+        for var i = 1; i < 8; i++
+        {
+            let date = today+i.day
+            dates.append(date)
+        }
+        
+        for var x = 0; x<dates.count; x++ {
+            print("[\(x)] " + dates[x].printTime())
+        }
+        
+        let screenwidth = self.view.frame.size.width
+        self.dateScrollView.frame.size.width = screenwidth
+        self.dateScrollView.frame.size.height = 97
+        
+        var counter = 0
+        
+        // Create two previous
+        for var i = 2; i>0; i-- {
+            
+            let dview = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
+            dview.frame.origin.x = screenwidth * CGFloat(-i)
+            
+            print("Origin: \(dview.frame.origin.x)")
+            
+            dview.firstMonthLabel.text = dates[counter].shortMonth()
+            dview.firstNumberLabel.text = dates[counter].shortDate()
+            dview.firstDayLabel.text = dates[counter].shortDay()
+            
+            counter++
+            
+            dview.secondMonthLabel.text = dates[counter].shortMonth()
+            dview.secondNumberLabel.text = dates[counter].shortDate()
+            dview.secondDayLabel.text = dates[counter].shortDay()
+            
+            counter++
+            
+            dview.thirdMonthLabel.text = dates[counter].shortMonth()
+            dview.thirdNumberLabel.text = dates[counter].shortDate()
+            dview.thirdDayLabel.text = dates[counter].shortDay()
+            
+            counter++
+            
+            self.dateScrollView.addSubview(dview)
+        }
+        
+        let dview = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
+        print("Origin: \(dview.frame.origin.x)")
+        dview.firstMonthLabel.text = dates[counter].shortMonth()
+        dview.firstNumberLabel.text = dates[counter].shortDate()
+        dview.firstDayLabel.text = dates[counter].shortDay()
+        counter++
+        dview.secondMonthLabel.text = dates[counter].shortMonth()
+        dview.secondNumberLabel.text = dates[counter].shortDate()
+        dview.secondDayLabel.text = dates[counter].shortDay()
+        counter++
+        dview.thirdMonthLabel.text = dates[counter].shortMonth()
+        dview.thirdNumberLabel.text = dates[counter].shortDate()
+        dview.thirdDayLabel.text = dates[counter].shortDay()
+        counter++
+        self.dateScrollView.addSubview(dview)
+        
+        // Create two previous
+        for var i = 1; i<3; i++ {
+            
+            let dview = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
+            dview.frame.origin.x = screenwidth * CGFloat(i)
+            
+            print("Origin: \(dview.frame.origin.x)")
+            
+            dview.firstMonthLabel.text = dates[counter].shortMonth()
+            dview.firstNumberLabel.text = dates[counter].shortDate()
+            dview.firstDayLabel.text = dates[counter].shortDay()
+            
+            counter++
+            
+            dview.secondMonthLabel.text = dates[counter].shortMonth()
+            dview.secondNumberLabel.text = dates[counter].shortDate()
+            dview.secondDayLabel.text = dates[counter].shortDay()
+            
+            counter++
+            
+            dview.thirdMonthLabel.text = dates[counter].shortMonth()
+            dview.thirdNumberLabel.text = dates[counter].shortDate()
+            dview.thirdDayLabel.text = dates[counter].shortDay()
+            
+            counter++
+            
+            self.dateScrollView.addSubview(dview)
+        }
+        
+        self.dateScrollView.contentSize = CGSizeMake(screenwidth * 5, self.dateScrollView.frame.size.height)
+        self.dateScrollView.canCancelContentTouches = true;
+        
+        
     }
 
 
