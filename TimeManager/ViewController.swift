@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        timestuff()
+        
         
         let screenwidth = self.view.frame.size.width
 
@@ -126,6 +128,22 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func timestuff() {
+        
+        let date = NSDate()
+        print(date.currentTime())
+        print(date.shortMonth())
+        print(date.shortDate())
+        print(date.shortDay())
+        print(date.printTime())
+        
+        let tomorrow = date+1.day
+        print(tomorrow.printTime())
+        
+        
+    
     }
 
 

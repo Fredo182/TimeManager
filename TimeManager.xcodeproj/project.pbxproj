@@ -17,6 +17,7 @@
 		0721338B1B779BE0006BBA58 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0721338A1B779BE0006BBA58 /* Project.swift */; };
 		07228EC01B7980BC007FD9BA /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07228EBF1B7980BC007FD9BA /* ProjectView.swift */; };
 		07228EC21B7980F8007FD9BA /* ProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07228EC11B7980F8007FD9BA /* ProjectView.xib */; };
+		072C412D1B82D15600996574 /* SwiftDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C412C1B82D15600996574 /* SwiftDate.swift */; };
 		0731D8C41B75F3CF00384B33 /* MCNewCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BA1B75F3CF00384B33 /* MCNewCustomLayer.m */; };
 		0731D8C51B75F3CF00384B33 /* MCNewCustomLayeredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BC1B75F3CF00384B33 /* MCNewCustomLayeredView.m */; };
 		0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8BF1B75F3CF00384B33 /* MCPercentageDoughnutView.m */; };
@@ -43,6 +44,7 @@
 		0721338A1B779BE0006BBA58 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		07228EBF1B7980BC007FD9BA /* ProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		07228EC11B7980F8007FD9BA /* ProjectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectView.xib; sourceTree = "<group>"; };
+		072C412C1B82D15600996574 /* SwiftDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDate.swift; sourceTree = "<group>"; };
 		0731D8B71B75F3CF00384B33 /* TimeManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		0731D8B81B75F3CF00384B33 /* MCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCore.h; sourceTree = "<group>"; };
 		0731D8B91B75F3CF00384B33 /* MCNewCustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayer.h; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		072133891B779B5D006BBA58 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				072C412C1B82D15600996574 /* SwiftDate.swift */,
 				0721338A1B779BE0006BBA58 /* Project.swift */,
 			);
 			name = Classes;
@@ -230,6 +233,7 @@
 				07B02C7C1B79A86E002EE40D /* DatesView.swift in Sources */,
 				07038F5B1B758F7A00D419B9 /* TimeManager.xcdatamodeld in Sources */,
 				0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */,
+				072C412D1B82D15600996574 /* SwiftDate.swift in Sources */,
 				07B432111B798E5A0085D9BC /* NibDesignable.swift in Sources */,
 				0731D8C41B75F3CF00384B33 /* MCNewCustomLayer.m in Sources */,
 				0721338B1B779BE0006BBA58 /* Project.swift in Sources */,
