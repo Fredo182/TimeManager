@@ -740,7 +740,7 @@ public extension NSDate {
 		return dateFormatter.stringFromDate(self)
 	}
     
-    // ADDED
+    // ADDED EXTENSIONS TO NSDATE
     public func currentTime() -> String {
         let formatter = NSDateFormatter()
         formatter.timeStyle = .ShortStyle
@@ -763,6 +763,17 @@ public extension NSDate {
     public func printTime() -> String {
         return self.toString(format: DateFormat.Custom("MMM dd EEE hh:mm"))
     }
+    
+    public func toKey() -> String {
+        return self.toString(format: DateFormat.Custom("MMddyyyy"))
+    }
+    
+    public func roundToSix() -> NSDate {        
+        let num: Int = 6 * Int(round(Float(self.minute) / 6.0))
+        return self.set("minute", value: num)!
+    }
+    
+    
     
 	
 	/**

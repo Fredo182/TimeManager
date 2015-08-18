@@ -48,16 +48,6 @@ class ViewController: UIViewController {
         
         self.dateScrollView.canCancelContentTouches = true;
         
-        print("Date Scroll: x: \(self.dateScrollView.frame.origin.x)  y: \(self.dateScrollView.frame.origin.y)")
-        print("Date Scroll: width: \(self.dateScrollView.frame.size.width)  height: \(self.dateScrollView.frame.size.height)")
-        
-        print("Date View 1: x: \(dview1.frame.origin.x)  y: \(dview1.frame.origin.y)")
-        print("Date View 1: width: \(dview1.frame.size.width)  height: \(dview1.frame.size.height)")
-        
-        print("Date View 2: x: \(dview2.frame.origin.x)  y: \(dview2.frame.origin.y)")
-        print("Date View 2: width: \(dview2.frame.size.width)  height: \(dview2.frame.size.height)")
-        
-        
         
         /**************************************************************************************************/
         
@@ -139,9 +129,8 @@ class ViewController: UIViewController {
         print(date.shortDay())
         print(date.printTime())
         
-        let tomorrow = date+1.day
-        print(tomorrow.printTime())
-        
+        print("Rounded")
+        print(date.roundToSix().printTime())
         
     
     }
