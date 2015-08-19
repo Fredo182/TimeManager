@@ -8,10 +8,37 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
+class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
+    var numbers = ["One","Two","Three","Four","Five"]
+    
+    @IBOutlet var tableView: UITableView!
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    // Numver of items in the list
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return numbers.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = numbers[indexPath.row]
+        cell.backgroundColor = UIColor.clearColor()
+        
+        
+        return cell
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = self
+        
 
         // Do any additional setup after loading the view.
     }
