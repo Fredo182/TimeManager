@@ -31,7 +31,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uR-yk-oST">
                                         <rect key="frame" x="0.0" y="530" width="600" height="70"/>
-                                        <color key="backgroundColor" red="0.054901960780000002" green="0.16078431369999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.058823529411764705" green="0.22352941176470587" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Cww-7N-eVE"/>
                                         </constraints>
@@ -113,7 +113,7 @@
                                         <rect key="frame" x="-137" y="25" width="875" height="31"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.054901960784313725" green="0.16078431372549021" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.22352941179999999" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Lkh-Cc-NLC" firstAttribute="top" secondItem="VCt-hp-Vj2" secondAttribute="top" constant="36" id="7U4-C2-Q06"/>
                                     <constraint firstItem="Lkh-Cc-NLC" firstAttribute="leading" secondItem="VCt-hp-Vj2" secondAttribute="leading" constant="20" id="P59-JI-cc9"/>
@@ -172,7 +172,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhr-GQ-YYn">
                                         <rect key="frame" x="0.0" y="530" width="600" height="70"/>
-                                        <color key="backgroundColor" red="0.054901960780000002" green="0.16078431369999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.058823529409999999" green="0.22352941179999999" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="ekf-Bb-42J"/>
                                         </constraints>
@@ -236,7 +236,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.054901960780000002" green="0.16078431369999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.22352941179999999" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="3Qx-BO-Qh1" firstAttribute="leading" secondItem="nYf-xf-rqI" secondAttribute="leading" constant="20" id="4nf-Kc-aEb"/>
                                     <constraint firstItem="rxK-Re-2m4" firstAttribute="centerX" secondItem="nYf-xf-rqI" secondAttribute="centerX" id="MG4-VB-r8x"/>

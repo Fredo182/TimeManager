@@ -15,45 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet var projectScrollView: UIScrollView!
     @IBOutlet weak var progressbar: MCPercentageDoughnutView!
     
+    var DatesArray: [NSDate] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getDates();
-        
+        loadDates();
+        loadDatesView();
         
         let screenwidth = self.view.frame.size.width
 
-        /**************************************************************************************************/
-        /*       TEST DATE SCROLL VIEW                   */
-        
-//        self.dateScrollView.frame.size.width = screenwidth
-//        self.dateScrollView.frame.size.height = 97
-//        
-//        let dview1 = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
-//        self.dateScrollView.addSubview(dview1)
-//        
-//        let dview2 = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
-//        var frame1 = dview1.frame
-//        frame1.origin.x = screenwidth
-//        dview2.frame = frame1
-//        
-//        dview2.firstMonthLabel.text = "Sep"
-//        dview2.secondMonthLabel.text = "Sep"
-//        dview2.thirdMonthLabel.text = "Sep"
-//        
-//        self.dateScrollView.addSubview(dview2)
-//        
-//        self.dateScrollView.contentSize = CGSizeMake(screenwidth * 2, self.dateScrollView.frame.size.height)
-//        
-//        
-//        self.dateScrollView.canCancelContentTouches = true;
-        
-        
-        /**************************************************************************************************/
-        
-        
-        
-        
+
         /**************************************************************************************************/
         /*       TEST PROJECT CHARGE SCROLL VIEW                   */
         
@@ -101,7 +73,7 @@ class ViewController: UIViewController {
         self.progressbar.linePercentage          = 0.15;
         self.progressbar.animationDuration       = 1.5;
 
-        self.progressbar.fillColor = UIColor(red: 33.0/255, green: 50.0/255, blue: 97.0/255, alpha: 1.0);
+        self.progressbar.fillColor = blueColor()
         self.progressbar.roundedBackgroundImage = UIImage(named: "center");
         self.progressbar.roundedImageOverlapPercentage = 0.06;
         
@@ -120,32 +92,37 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getDates() {
+    /****************************************************************************************
+    * This function loads up all the dates into the DatesArray variable. This will first
+    * append the 7 days before today, todays date, then it will append the next 7 days
+    *****************************************************************************************/
+    func loadDates() {
         
         // Set variables for today and array of dates
         let today = NSDate()
-        var dates: [NSDate] = []
         
         // Get the previous 7 days starting with latest
         for var i = 7; i > 0; i--
         {
             let date = today-i.day
-            dates.append(date)
+            DatesArray.append(date)
         }
         
         // Append today in the middle of array
-        dates.append(today)
+        DatesArray.append(today)
         
         // Get the next 7 days starting with earliest
         for var i = 1; i < 8; i++
         {
             let date = today+i.day
-            dates.append(date)
+            DatesArray.append(date)
         }
-        
-        for var x = 0; x<dates.count; x++ {
-            print("[\(x)] " + dates[x].printTime())
-        }
+    }
+    /****************************************************************************************
+    * This function loads all the dates into the scroll view. It will render all the
+    * dates in order and in the end set the scrollview offset to start in the middle dates
+    *****************************************************************************************/
+    func loadDatesView() {
         
         let screenwidth = self.view.frame.size.width
         self.dateScrollView.frame.size.width = screenwidth
@@ -153,86 +130,56 @@ class ViewController: UIViewController {
         
         var counter = 0
         
-        // Create two previous
-        for var i = 2; i>0; i-- {
-            
-            let dview = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
-            dview.frame.origin.x = screenwidth * CGFloat(-i)
-            
-            print("Origin: \(dview.frame.origin.x)")
-            
-            dview.firstMonthLabel.text = dates[counter].shortMonth()
-            dview.firstNumberLabel.text = dates[counter].shortDate()
-            dview.firstDayLabel.text = dates[counter].shortDay()
-            
-            counter++
-            
-            dview.secondMonthLabel.text = dates[counter].shortMonth()
-            dview.secondNumberLabel.text = dates[counter].shortDate()
-            dview.secondDayLabel.text = dates[counter].shortDay()
-            
-            counter++
-            
-            dview.thirdMonthLabel.text = dates[counter].shortMonth()
-            dview.thirdNumberLabel.text = dates[counter].shortDate()
-            dview.thirdDayLabel.text = dates[counter].shortDay()
-            
-            counter++
-            
-            self.dateScrollView.addSubview(dview)
-        }
-        
-        let dview = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
-        print("Origin: \(dview.frame.origin.x)")
-        dview.firstMonthLabel.text = dates[counter].shortMonth()
-        dview.firstNumberLabel.text = dates[counter].shortDate()
-        dview.firstDayLabel.text = dates[counter].shortDay()
-        counter++
-        dview.secondMonthLabel.text = dates[counter].shortMonth()
-        dview.secondNumberLabel.text = dates[counter].shortDate()
-        dview.secondDayLabel.text = dates[counter].shortDay()
-        counter++
-        dview.thirdMonthLabel.text = dates[counter].shortMonth()
-        dview.thirdNumberLabel.text = dates[counter].shortDate()
-        dview.thirdDayLabel.text = dates[counter].shortDay()
-        counter++
-        self.dateScrollView.addSubview(dview)
-        
-        // Create two previous
-        for var i = 1; i<3; i++ {
+        for var i = 0; i<5; i++ {
             
             let dview = DatesView(frame:CGRectMake(0, 0,screenwidth, 97))
             dview.frame.origin.x = screenwidth * CGFloat(i)
             
-            print("Origin: \(dview.frame.origin.x)")
-            
-            dview.firstMonthLabel.text = dates[counter].shortMonth()
-            dview.firstNumberLabel.text = dates[counter].shortDate()
-            dview.firstDayLabel.text = dates[counter].shortDay()
-            
-            counter++
-            
-            dview.secondMonthLabel.text = dates[counter].shortMonth()
-            dview.secondNumberLabel.text = dates[counter].shortDate()
-            dview.secondDayLabel.text = dates[counter].shortDay()
+            dview.firstMonthLabel.text = DatesArray[counter].shortMonth()
+            dview.firstNumberLabel.text = DatesArray[counter].shortDate()
+            dview.firstDayLabel.text = DatesArray[counter].shortDay()
+            dview.firstDateButton.tag = counter;
             
             counter++
             
-            dview.thirdMonthLabel.text = dates[counter].shortMonth()
-            dview.thirdNumberLabel.text = dates[counter].shortDate()
-            dview.thirdDayLabel.text = dates[counter].shortDay()
+            dview.secondMonthLabel.text = DatesArray[counter].shortMonth()
+            dview.secondNumberLabel.text = DatesArray[counter].shortDate()
+            dview.secondDayLabel.text = DatesArray[counter].shortDay()
+            dview.secondDateButton.tag = counter;
+            
+            // This one is always today. Set to color blue
+            if(i == 2)
+            {
+                dview.secondMonthLabel.textColor = blueColor()
+                dview.secondNumberLabel.textColor = blueColor()
+                dview.secondDayLabel.textColor = blueColor()
+            }
+            
+            counter++
+            
+            dview.thirdMonthLabel.text = DatesArray[counter].shortMonth()
+            dview.thirdNumberLabel.text = DatesArray[counter].shortDate()
+            dview.thirdDayLabel.text = DatesArray[counter].shortDay()
+            dview.thirdDateButton.tag = counter
             
             counter++
             
             self.dateScrollView.addSubview(dview)
+            
         }
         
         self.dateScrollView.contentSize = CGSizeMake(screenwidth * 5, self.dateScrollView.frame.size.height)
-        self.dateScrollView.canCancelContentTouches = true;
-        
+        self.dateScrollView.canCancelContentTouches = true
+        self.dateScrollView.contentOffset.x = screenwidth * 2
         
     }
-
-
+    
+    
+    /****************************************************************************************
+    * This function will return the main theme color
+    *****************************************************************************************/
+    func blueColor () -> UIColor {
+        return UIColor(red: 15.0/255, green: 57.0/255, blue: 119.0/255, alpha: 1.0)
+    }
 }
 
