@@ -38,7 +38,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         
         tableView.dataSource = self
-        
+        tableView.backgroundColor = UIColor.clearColor()
 
         // Do any additional setup after loading the view.
     }

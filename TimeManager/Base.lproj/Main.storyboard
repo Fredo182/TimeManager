@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="OSP-DIN.ttf">
@@ -191,32 +192,51 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-Rz-uRy">
-                                                    <rect key="frame" x="10" y="8" width="236" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-Rz-uRy">
+                                                    <rect key="frame" x="10" y="6" width="236" height="23"/>
                                                     <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="24"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="START" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fud-AI-EOE">
-                                                    <rect key="frame" x="246" y="8" width="118" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fud-AI-EOE">
+                                                    <rect key="frame" x="246" y="6" width="118" height="23"/>
                                                     <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="24"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STOP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmQ-Xd-8Sc">
-                                                    <rect key="frame" x="364" y="8" width="118" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STOP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmQ-Xd-8Sc">
+                                                    <rect key="frame" x="364" y="6" width="118" height="23"/>
                                                     <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="24"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PROJECT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppy-6o-0hp">
-                                                    <rect key="frame" x="482" y="8" width="118" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROJECT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppy-6o-0hp">
+                                                    <rect key="frame" x="482" y="6" width="118" height="23"/>
                                                     <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="24"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="ppy-6o-0hp" firstAttribute="width" secondItem="Fud-AI-EOE" secondAttribute="width" id="1hY-W1-Qf4"/>
+                                                <constraint firstItem="ZmQ-Xd-8Sc" firstAttribute="leading" secondItem="Fud-AI-EOE" secondAttribute="trailing" id="3Av-My-SHl"/>
+                                                <constraint firstItem="ppy-6o-0hp" firstAttribute="leading" secondItem="ZmQ-Xd-8Sc" secondAttribute="trailing" id="4Lc-a3-725"/>
+                                                <constraint firstItem="A7v-Rz-uRy" firstAttribute="height" secondItem="Fud-AI-EOE" secondAttribute="height" id="AmT-lx-JgV"/>
+                                                <constraint firstItem="A7v-Rz-uRy" firstAttribute="width" secondItem="Fud-AI-EOE" secondAttribute="width" multiplier="2" id="Clm-zk-uAA"/>
+                                                <constraint firstAttribute="trailing" secondItem="ppy-6o-0hp" secondAttribute="trailing" id="Eav-Y5-d6h"/>
+                                                <constraint firstItem="A7v-Rz-uRy" firstAttribute="top" secondItem="Fud-AI-EOE" secondAttribute="top" id="Fc4-Bb-dWF"/>
+                                                <constraint firstItem="Fud-AI-EOE" firstAttribute="leading" secondItem="A7v-Rz-uRy" secondAttribute="trailing" id="FdW-2b-SLh"/>
+                                                <constraint firstItem="ZmQ-Xd-8Sc" firstAttribute="top" secondItem="Fud-AI-EOE" secondAttribute="top" id="SWd-mf-qCc"/>
+                                                <constraint firstItem="A7v-Rz-uRy" firstAttribute="leading" secondItem="7j5-C7-q27" secondAttribute="leading" constant="10" id="YgD-zg-84H"/>
+                                                <constraint firstItem="ZmQ-Xd-8Sc" firstAttribute="top" secondItem="ppy-6o-0hp" secondAttribute="top" id="bYq-e0-7Gp"/>
+                                                <constraint firstItem="ZmQ-Xd-8Sc" firstAttribute="width" secondItem="Fud-AI-EOE" secondAttribute="width" id="i5k-Da-RLc"/>
+                                                <constraint firstItem="ZmQ-Xd-8Sc" firstAttribute="height" secondItem="Fud-AI-EOE" secondAttribute="height" id="jgL-P7-Zzk"/>
+                                                <constraint firstAttribute="bottom" secondItem="A7v-Rz-uRy" secondAttribute="bottom" constant="3" id="q9b-Pz-mSb"/>
+                                                <constraint firstItem="ppy-6o-0hp" firstAttribute="height" secondItem="Fud-AI-EOE" secondAttribute="height" id="wTg-Sn-P4F"/>
+                                                <constraint firstItem="ppy-6o-0hp" firstAttribute="top" secondItem="Fud-AI-EOE" secondAttribute="top" id="ydh-5M-FYM"/>
+                                                <constraint firstItem="A7v-Rz-uRy" firstAttribute="top" secondItem="7j5-C7-q27" secondAttribute="top" constant="6" id="z5O-d3-Kft"/>
+                                            </constraints>
                                         </view>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="zKr-lv-Xfc">
