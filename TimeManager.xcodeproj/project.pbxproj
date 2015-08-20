@@ -24,6 +24,7 @@
 		0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */; };
 		0731D8C81B75F3CF00384B33 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C31B75F3CF00384B33 /* MCUtil.m */; };
 		077074971B7B0E3B00C008E8 /* UIButtonScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */; };
+		07848D211B857E3E0097AAD7 /* TimeEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07848D201B857E3E0097AAD7 /* TimeEntryCell.swift */; };
 		07B02C7A1B79A848002EE40D /* DatesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B02C791B79A848002EE40D /* DatesView.xib */; };
 		07B02C7C1B79A86E002EE40D /* DatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B02C7B1B79A86E002EE40D /* DatesView.swift */; };
 		07B432111B798E5A0085D9BC /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B4320E1B798E5A0085D9BC /* NibDesignable.swift */; };
@@ -42,8 +43,8 @@
 		07038F611B758F7A00D419B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07038F691B75BC7500D419B9 /* OSP-DIN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OSP-DIN.ttf"; sourceTree = "<group>"; };
 		0721338A1B779BE0006BBA58 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		07228EBF1B7980BC007FD9BA /* ProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
-		07228EC11B7980F8007FD9BA /* ProjectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectView.xib; sourceTree = "<group>"; };
+		07228EBF1B7980BC007FD9BA /* ProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectView.swift; path = TimeManager/ProjectView.swift; sourceTree = "<group>"; };
+		07228EC11B7980F8007FD9BA /* ProjectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProjectView.xib; path = TimeManager/ProjectView.xib; sourceTree = "<group>"; };
 		072C412C1B82D15600996574 /* SwiftDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDate.swift; sourceTree = "<group>"; };
 		0731D8B71B75F3CF00384B33 /* TimeManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		0731D8B81B75F3CF00384B33 /* MCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCore.h; sourceTree = "<group>"; };
@@ -58,10 +59,11 @@
 		0731D8C11B75F3CF00384B33 /* MCSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSliceLayer.m; sourceTree = "<group>"; };
 		0731D8C21B75F3CF00384B33 /* MCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUtil.h; sourceTree = "<group>"; };
 		0731D8C31B75F3CF00384B33 /* MCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtil.m; sourceTree = "<group>"; };
-		077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonScrollView.swift; sourceTree = "<group>"; };
-		07B02C791B79A848002EE40D /* DatesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatesView.xib; sourceTree = "<group>"; };
-		07B02C7B1B79A86E002EE40D /* DatesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesView.swift; sourceTree = "<group>"; };
-		07B4320E1B798E5A0085D9BC /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDesignable.swift; sourceTree = "<group>"; };
+		077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonScrollView.swift; path = TimeManager/UIButtonScrollView.swift; sourceTree = "<group>"; };
+		07848D201B857E3E0097AAD7 /* TimeEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEntryCell.swift; sourceTree = "<group>"; };
+		07B02C791B79A848002EE40D /* DatesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DatesView.xib; path = TimeManager/DatesView.xib; sourceTree = "<group>"; };
+		07B02C7B1B79A86E002EE40D /* DatesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatesView.swift; path = TimeManager/DatesView.swift; sourceTree = "<group>"; };
+		07B4320E1B798E5A0085D9BC /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibDesignable.swift; path = TimeManager/NibDesignable.swift; sourceTree = "<group>"; };
 		07CBFB191B82C1B80040AEF9 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		07FF48D91B76A94D00B2881C /* documentation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = documentation.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 		07038F461B758F7A00D419B9 = {
 			isa = PBXGroup;
 			children = (
+				07848D1F1B857D7C0097AAD7 /* CustomViews */,
 				072133891B779B5D006BBA58 /* Classes */,
 				0731D8B61B75F3B600384B33 /* ProgressBar */,
 				07038F511B758F7A00D419B9 /* TimeManager */,
@@ -98,7 +101,6 @@
 		07038F511B758F7A00D419B9 /* TimeManager */ = {
 			isa = PBXGroup;
 			children = (
-				07B4320E1B798E5A0085D9BC /* NibDesignable.swift */,
 				07038F691B75BC7500D419B9 /* OSP-DIN.ttf */,
 				07038F521B758F7A00D419B9 /* AppDelegate.swift */,
 				07038F541B758F7A00D419B9 /* ViewController.swift */,
@@ -108,11 +110,6 @@
 				07038F5E1B758F7A00D419B9 /* LaunchScreen.storyboard */,
 				07038F611B758F7A00D419B9 /* Info.plist */,
 				07038F591B758F7A00D419B9 /* TimeManager.xcdatamodeld */,
-				07228EBF1B7980BC007FD9BA /* ProjectView.swift */,
-				07228EC11B7980F8007FD9BA /* ProjectView.xib */,
-				07B02C791B79A848002EE40D /* DatesView.xib */,
-				07B02C7B1B79A86E002EE40D /* DatesView.swift */,
-				077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */,
 			);
 			path = TimeManager;
 			sourceTree = "<group>";
@@ -122,6 +119,8 @@
 			children = (
 				072C412C1B82D15600996574 /* SwiftDate.swift */,
 				0721338A1B779BE0006BBA58 /* Project.swift */,
+				07B4320E1B798E5A0085D9BC /* NibDesignable.swift */,
+				07848D201B857E3E0097AAD7 /* TimeEntryCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -145,6 +144,18 @@
 				0731D8B71B75F3CF00384B33 /* TimeManager-Bridging-Header.h */,
 			);
 			name = ProgressBar;
+			sourceTree = "<group>";
+		};
+		07848D1F1B857D7C0097AAD7 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				07228EBF1B7980BC007FD9BA /* ProjectView.swift */,
+				07228EC11B7980F8007FD9BA /* ProjectView.xib */,
+				07B02C791B79A848002EE40D /* DatesView.xib */,
+				07B02C7B1B79A86E002EE40D /* DatesView.swift */,
+				077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				07B432111B798E5A0085D9BC /* NibDesignable.swift in Sources */,
 				0731D8C41B75F3CF00384B33 /* MCNewCustomLayer.m in Sources */,
 				0721338B1B779BE0006BBA58 /* Project.swift in Sources */,
+				07848D211B857E3E0097AAD7 /* TimeEntryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

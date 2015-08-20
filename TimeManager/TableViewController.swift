@@ -10,7 +10,10 @@ import UIKit
 
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
-    var numbers = ["One","Two","Three","Four","Five"]
+    var numbers = ["3.5 hr","4.3 hr"]
+    var starttimes = ["8:00AM", "11:30AM"]
+    var stoptimes = ["11:30AM", "3:48PM"]
+    var projects = ["AME", "SVMS"]
     
     @IBOutlet var tableView: UITableView!
     
@@ -24,9 +27,13 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TimeEntryCell
         
-        cell.textLabel?.text = numbers[indexPath.row]
+        cell.totalTimeLabel.text = numbers[indexPath.row]
+        cell.startTimeLabel.text = starttimes[indexPath.row]
+        cell.stopTimeLabel.text = stoptimes[indexPath.row]
+        cell.projectNameLabel.text = projects[indexPath.row]
+        
         cell.backgroundColor = UIColor.clearColor()
         
         
