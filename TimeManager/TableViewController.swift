@@ -39,6 +39,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
+        tableView.tableFooterView = UIView(frame:CGRectZero)
+        tableView.separatorColor = UIColor.clearColor()
 
         // Do any additional setup after loading the view.
     }

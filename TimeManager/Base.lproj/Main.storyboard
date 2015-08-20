@@ -257,19 +257,19 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYP-ek-Hwx">
-                                                            <rect key="frame" x="246" y="7" width="118" height="48"/>
+                                                            <rect key="frame" x="246" y="21" width="118" height="32"/>
                                                             <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtM-p7-YVM">
-                                                            <rect key="frame" x="364" y="7" width="118" height="48"/>
+                                                            <rect key="frame" x="364" y="21" width="118" height="32"/>
                                                             <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUi-mk-Fhj">
-                                                            <rect key="frame" x="482" y="7" width="118" height="48"/>
+                                                            <rect key="frame" x="482" y="21" width="118" height="32"/>
                                                             <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -282,9 +282,9 @@
                                                         <constraint firstItem="CtM-p7-YVM" firstAttribute="leading" secondItem="yYP-ek-Hwx" secondAttribute="trailing" id="7qd-fz-5Nm"/>
                                                         <constraint firstItem="MXe-Qz-hfA" firstAttribute="leading" secondItem="XAf-NV-t6H" secondAttribute="leading" constant="10" id="AGW-Hg-ykR"/>
                                                         <constraint firstItem="yYP-ek-Hwx" firstAttribute="leading" secondItem="MXe-Qz-hfA" secondAttribute="trailing" id="CrM-1q-8sh"/>
-                                                        <constraint firstItem="MXe-Qz-hfA" firstAttribute="height" secondItem="yYP-ek-Hwx" secondAttribute="height" id="J7p-Uo-ztV"/>
+                                                        <constraint firstItem="MXe-Qz-hfA" firstAttribute="height" secondItem="yYP-ek-Hwx" secondAttribute="height" multiplier="3/2" id="J7p-Uo-ztV"/>
                                                         <constraint firstItem="hUi-mk-Fhj" firstAttribute="height" secondItem="CtM-p7-YVM" secondAttribute="height" id="RG5-zY-PgC"/>
-                                                        <constraint firstAttribute="bottom" secondItem="yYP-ek-Hwx" secondAttribute="bottom" id="T80-rZ-djp"/>
+                                                        <constraint firstAttribute="bottom" secondItem="yYP-ek-Hwx" secondAttribute="bottom" constant="2" id="T80-rZ-djp"/>
                                                         <constraint firstItem="yYP-ek-Hwx" firstAttribute="top" secondItem="CtM-p7-YVM" secondAttribute="top" id="Vfg-Yj-0NX"/>
                                                         <constraint firstAttribute="trailing" secondItem="hUi-mk-Fhj" secondAttribute="trailing" id="cdU-6e-Cvu"/>
                                                         <constraint firstItem="yYP-ek-Hwx" firstAttribute="width" secondItem="CtM-p7-YVM" secondAttribute="width" id="d6p-ZD-zu6"/>
