@@ -13,6 +13,10 @@
             <string>OSP-DIN</string>
             <string>OSP-DIN</string>
             <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
+            <string>OSP-DIN</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -182,7 +186,7 @@
                                             <constraint firstAttribute="height" constant="70" id="ekf-Bb-42J"/>
                                         </constraints>
                                     </button>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eQ8-yo-BjF">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eQ8-yo-BjF">
                                         <rect key="frame" x="0.0" y="70" width="600" height="461"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -210,7 +214,7 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROJECT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppy-6o-0hp">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROJECT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppy-6o-0hp">
                                                     <rect key="frame" x="482" y="6" width="118" height="23"/>
                                                     <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="24"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -239,13 +243,56 @@
                                             </constraints>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="zKr-lv-Xfc">
-                                                <rect key="frame" x="0.0" y="54" width="600" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="55" id="zKr-lv-Xfc">
+                                                <rect key="frame" x="0.0" y="54" width="600" height="55"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zKr-lv-Xfc" id="XAf-NV-t6H">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.5 hr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXe-Qz-hfA">
+                                                            <rect key="frame" x="10" y="6" width="236" height="48"/>
+                                                            <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="45"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYP-ek-Hwx">
+                                                            <rect key="frame" x="246" y="7" width="118" height="48"/>
+                                                            <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtM-p7-YVM">
+                                                            <rect key="frame" x="364" y="7" width="118" height="48"/>
+                                                            <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUi-mk-Fhj">
+                                                            <rect key="frame" x="482" y="7" width="118" height="48"/>
+                                                            <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="hUi-mk-Fhj" firstAttribute="leading" secondItem="CtM-p7-YVM" secondAttribute="trailing" id="5lp-aT-1ND"/>
+                                                        <constraint firstItem="yYP-ek-Hwx" firstAttribute="height" secondItem="CtM-p7-YVM" secondAttribute="height" id="7fu-T4-TSd"/>
+                                                        <constraint firstItem="CtM-p7-YVM" firstAttribute="leading" secondItem="yYP-ek-Hwx" secondAttribute="trailing" id="7qd-fz-5Nm"/>
+                                                        <constraint firstItem="MXe-Qz-hfA" firstAttribute="leading" secondItem="XAf-NV-t6H" secondAttribute="leading" constant="10" id="AGW-Hg-ykR"/>
+                                                        <constraint firstItem="yYP-ek-Hwx" firstAttribute="leading" secondItem="MXe-Qz-hfA" secondAttribute="trailing" id="CrM-1q-8sh"/>
+                                                        <constraint firstItem="MXe-Qz-hfA" firstAttribute="height" secondItem="yYP-ek-Hwx" secondAttribute="height" id="J7p-Uo-ztV"/>
+                                                        <constraint firstItem="hUi-mk-Fhj" firstAttribute="height" secondItem="CtM-p7-YVM" secondAttribute="height" id="RG5-zY-PgC"/>
+                                                        <constraint firstAttribute="bottom" secondItem="yYP-ek-Hwx" secondAttribute="bottom" id="T80-rZ-djp"/>
+                                                        <constraint firstItem="yYP-ek-Hwx" firstAttribute="top" secondItem="CtM-p7-YVM" secondAttribute="top" id="Vfg-Yj-0NX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hUi-mk-Fhj" secondAttribute="trailing" id="cdU-6e-Cvu"/>
+                                                        <constraint firstItem="yYP-ek-Hwx" firstAttribute="width" secondItem="CtM-p7-YVM" secondAttribute="width" id="d6p-ZD-zu6"/>
+                                                        <constraint firstItem="MXe-Qz-hfA" firstAttribute="width" secondItem="yYP-ek-Hwx" secondAttribute="width" multiplier="2" id="gwD-AI-mmj"/>
+                                                        <constraint firstItem="MXe-Qz-hfA" firstAttribute="top" secondItem="XAf-NV-t6H" secondAttribute="top" constant="6" id="ozC-Eu-K3A"/>
+                                                        <constraint firstItem="hUi-mk-Fhj" firstAttribute="width" secondItem="CtM-p7-YVM" secondAttribute="width" id="sPf-Om-LWh"/>
+                                                        <constraint firstItem="hUi-mk-Fhj" firstAttribute="top" secondItem="CtM-p7-YVM" secondAttribute="top" id="uTG-Id-fn8"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableViewCell>
@@ -293,7 +340,7 @@
                                         <state key="normal" image="plus"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue Aug 4 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxK-Re-2m4">
-                                        <rect key="frame" x="248" y="25" width="105" height="25"/>
+                                        <rect key="frame" x="248" y="30" width="105" height="25"/>
                                         <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="23"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -306,7 +353,7 @@
                                     <constraint firstAttribute="height" constant="70" id="jIx-xM-DB1"/>
                                     <constraint firstAttribute="trailing" secondItem="xIP-wT-Q2D" secondAttribute="trailing" constant="20" id="lUb-z0-K6r"/>
                                     <constraint firstItem="3Qx-BO-Qh1" firstAttribute="top" secondItem="nYf-xf-rqI" secondAttribute="top" constant="25" id="sJi-Ep-70O"/>
-                                    <constraint firstItem="rxK-Re-2m4" firstAttribute="top" secondItem="nYf-xf-rqI" secondAttribute="top" constant="25" id="xNr-MW-XHH"/>
+                                    <constraint firstItem="rxK-Re-2m4" firstAttribute="top" secondItem="nYf-xf-rqI" secondAttribute="top" constant="30" id="xNr-MW-XHH"/>
                                     <constraint firstItem="xIP-wT-Q2D" firstAttribute="top" secondItem="nYf-xf-rqI" secondAttribute="top" constant="25" id="xQc-d7-vRZ"/>
                                 </constraints>
                             </view>
