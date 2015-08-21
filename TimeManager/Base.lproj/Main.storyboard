@@ -423,8 +423,12 @@
                                                     <constraint firstAttribute="height" constant="45" id="Nmf-W0-ozV"/>
                                                 </constraints>
                                             </view>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8m9-xZ-Vvt">
+                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8m9-xZ-Vvt">
                                                 <rect key="frame" x="0.0" y="46" width="600" height="107"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="6mL-0G-cLs" id="bOS-me-3g3"/>
+                                                    <outlet property="delegate" destination="6mL-0G-cLs" id="W74-2P-20r"/>
+                                                </connections>
                                             </pickerView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -448,8 +452,12 @@
                                                     <constraint firstAttribute="height" constant="45" id="krG-qG-gvi"/>
                                                 </constraints>
                                             </view>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOn-0t-E2X">
+                                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOn-0t-E2X">
                                                 <rect key="frame" x="0.0" y="46" width="600" height="107"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="6mL-0G-cLs" id="UB3-ua-qzl"/>
+                                                    <outlet property="delegate" destination="6mL-0G-cLs" id="BVh-Vt-ALU"/>
+                                                </connections>
                                             </pickerView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -475,6 +483,10 @@
                                             </view>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLw-Hh-w8b">
                                                 <rect key="frame" x="0.0" y="44" width="600" height="107"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="6mL-0G-cLs" id="icW-Mp-gFe"/>
+                                                    <outlet property="delegate" destination="6mL-0G-cLs" id="C6G-LN-JWN"/>
+                                                </connections>
                                             </pickerView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
