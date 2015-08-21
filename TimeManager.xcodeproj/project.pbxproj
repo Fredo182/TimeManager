@@ -25,6 +25,7 @@
 		0731D8C81B75F3CF00384B33 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731D8C31B75F3CF00384B33 /* MCUtil.m */; };
 		077074971B7B0E3B00C008E8 /* UIButtonScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */; };
 		07848D211B857E3E0097AAD7 /* TimeEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07848D201B857E3E0097AAD7 /* TimeEntryCell.swift */; };
+		07848D271B86BAE70097AAD7 /* TimeEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07848D261B86BAE70097AAD7 /* TimeEntryViewController.swift */; };
 		07B02C7A1B79A848002EE40D /* DatesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B02C791B79A848002EE40D /* DatesView.xib */; };
 		07B02C7C1B79A86E002EE40D /* DatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B02C7B1B79A86E002EE40D /* DatesView.swift */; };
 		07B432111B798E5A0085D9BC /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B4320E1B798E5A0085D9BC /* NibDesignable.swift */; };
@@ -61,6 +62,7 @@
 		0731D8C31B75F3CF00384B33 /* MCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtil.m; sourceTree = "<group>"; };
 		077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonScrollView.swift; path = TimeManager/UIButtonScrollView.swift; sourceTree = "<group>"; };
 		07848D201B857E3E0097AAD7 /* TimeEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEntryCell.swift; sourceTree = "<group>"; };
+		07848D261B86BAE70097AAD7 /* TimeEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEntryViewController.swift; sourceTree = "<group>"; };
 		07B02C791B79A848002EE40D /* DatesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DatesView.xib; path = TimeManager/DatesView.xib; sourceTree = "<group>"; };
 		07B02C7B1B79A86E002EE40D /* DatesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatesView.swift; path = TimeManager/DatesView.swift; sourceTree = "<group>"; };
 		07B4320E1B798E5A0085D9BC /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibDesignable.swift; path = TimeManager/NibDesignable.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				07038F5E1B758F7A00D419B9 /* LaunchScreen.storyboard */,
 				07038F611B758F7A00D419B9 /* Info.plist */,
 				07038F591B758F7A00D419B9 /* TimeManager.xcdatamodeld */,
+				07848D261B86BAE70097AAD7 /* TimeEntryViewController.swift */,
 			);
 			path = TimeManager;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */,
 				07038F531B758F7A00D419B9 /* AppDelegate.swift in Sources */,
 				07B02C7C1B79A86E002EE40D /* DatesView.swift in Sources */,
+				07848D271B86BAE70097AAD7 /* TimeEntryViewController.swift in Sources */,
 				07038F5B1B758F7A00D419B9 /* TimeManager.xcdatamodeld in Sources */,
 				0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */,
 				072C412D1B82D15600996574 /* SwiftDate.swift in Sources */,
