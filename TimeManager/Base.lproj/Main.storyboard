@@ -625,8 +625,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="projectLabel" destination="8ES-HO-Sd3" id="msS-2s-lJb"/>
                         <outlet property="projectPicker" destination="HOn-0t-E2X" id="rGA-Yt-Ftb"/>
+                        <outlet property="startTimeLabel" destination="V75-kw-nbu" id="cTe-yW-OPH"/>
                         <outlet property="startTimePicker" destination="kLw-Hh-w8b" id="DiQ-WM-uyC"/>
+                        <outlet property="stopTimeLabel" destination="ywc-EC-rQM" id="ZEb-Ah-CBu"/>
                         <outlet property="stopTimePicker" destination="8m9-xZ-Vvt" id="Wfg-OW-CYH"/>
                     </connections>
                 </viewController>

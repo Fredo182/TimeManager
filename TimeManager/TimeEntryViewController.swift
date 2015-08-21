@@ -14,6 +14,10 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet var stopTimePicker: UIPickerView!
     @IBOutlet var projectPicker: UIPickerView!
     
+    @IBOutlet var startTimeLabel: UILabel!
+    @IBOutlet var stopTimeLabel: UILabel!
+    @IBOutlet var projectLabel: UILabel!
+    
     //UIPicker data source
     let hoursArray = ["1","2","3","4","5","6","7","8","9","10","11","12"]
     let minuteArray = ["00", "06", "12", "18", "24", "30", "36", "42", "48", "54"]
@@ -87,6 +91,33 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
 
     }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if pickerView.tag == 0 || pickerView.tag == 1{
+            var text: String
+            if(component == 0){
+                 text =  "\(hoursArray[row]):\(minuteArray[pickerView.selectedRowInComponent(1)])\(suffixArray[pickerView.selectedRowInComponent(2)])"
+            }
+            else if(component == 1){
+                text =  "\(hoursArray[pickerView.selectedRowInComponent(0)]):\(minuteArray[row])\(suffixArray[pickerView.selectedRowInComponent(2)])"
+            }
+            else{
+                text =  "\(hoursArray[pickerView.selectedRowInComponent(0)]):\(minuteArray[pickerView.selectedRowInComponent(1)])\(suffixArray[row])"
+            }
+            
+            if(pickerView.tag == 0){
+                startTimeLabel.text = text
+            }
+            else {
+                stopTimeLabel.text = text
+            }
+        }
+        else{
+            projectLabel.text = "\(projectsArray[row])"
+        }
+    }
+    
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView
     {
         var pickerLabel = view as! UILabel!
