@@ -10,15 +10,29 @@ import UIKit
 
 class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var hoursArray = ["1","2","3","4","5","6","7","8","9","10","11","12"]
-    var minuteArray = ["00", "06", "12", "18", "24", "30", "36", "42", "48", "54"]
-    var suffixArray = ["AM", "PM"]
+    @IBOutlet var startTimePicker: UIPickerView!
+    @IBOutlet var stopTimePicker: UIPickerView!
+    @IBOutlet var projectPicker: UIPickerView!
+    
+    //UIPicker data source
+    let hoursArray = ["1","2","3","4","5","6","7","8","9","10","11","12"]
+    let minuteArray = ["00", "06", "12", "18", "24", "30", "36", "42", "48", "54"]
+    let suffixArray = ["AM", "PM"]
     var projectsArray = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         projectsArray = ["AME","SVMS", "MOB"]
-
+        
+        // Set the default picker values
+        startTimePicker.selectRow(7, inComponent: 0, animated: true)
+        startTimePicker.selectRow(5, inComponent: 1, animated: true)
+        startTimePicker.selectRow(0, inComponent: 2, animated: true)
+        
+        stopTimePicker.selectRow(8, inComponent: 0, animated: true)
+        stopTimePicker.selectRow(5, inComponent: 1, animated: true)
+        stopTimePicker.selectRow(0, inComponent: 2, animated: true)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +87,42 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
 
     }
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView
+    {
+        var pickerLabel = view as! UILabel!
+        if view == nil {
+            pickerLabel = UILabel()
+            pickerLabel.textColor = UIColor.whiteColor()
+            pickerLabel.font = UIFont(name: "OSP-DIN", size: 30)
+            pickerLabel.textAlignment = NSTextAlignment.Center
+        }
+        
+        if pickerView.tag == 0 || pickerView.tag == 1 {
+            pickerLabel.font = UIFont(name: "OSP-DIN", size: 35)
+            if(component == 0){
+                pickerLabel.text = hoursArray[row]
+                return pickerLabel
+            }
+            else if(component == 1){
+                pickerLabel.text = minuteArray[row]
+                return pickerLabel
+            }
+            else{
+                pickerLabel.text = suffixArray[row]
+                return pickerLabel
+            }
+        }
+        else{
+            pickerLabel.text = projectsArray[row]
+            return pickerLabel
+        }
+
+    }
+    
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 40.0
+    }
+
     
 
     /*

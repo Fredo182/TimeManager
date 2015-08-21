@@ -576,6 +576,11 @@
                             <constraint firstItem="ARZ-nW-tzD" firstAttribute="top" secondItem="BUI-ds-UMh" secondAttribute="bottom" id="tVB-s3-exB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="projectPicker" destination="HOn-0t-E2X" id="rGA-Yt-Ftb"/>
+                        <outlet property="startTimePicker" destination="kLw-Hh-w8b" id="DiQ-WM-uyC"/>
+                        <outlet property="stopTimePicker" destination="8m9-xZ-Vvt" id="Wfg-OW-CYH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJX-6r-Fgw" sceneMemberID="firstResponder"/>
             </objects>
