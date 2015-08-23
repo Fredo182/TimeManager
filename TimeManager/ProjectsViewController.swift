@@ -12,6 +12,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
 
     var chargecode = ["EW3003100", "AWWW00135"]
     var projects = ["AME", "SVMS"]
+    var alert:AddProjectAlertView!
     
     @IBOutlet var projectsTableView: UITableView!
     
@@ -44,10 +45,34 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         projectsTableView.backgroundColor = UIColor.clearColor()
         projectsTableView.tableFooterView = UIView(frame:CGRectZero)
         projectsTableView.separatorColor = UIColor.clearColor()
+        
+        let screenwidth = self.view.frame.size.width
+        let screenheight = self.view.frame.size.height
+        
+        alert = AddProjectAlertView(frame:CGRectMake(0, screenheight ,screenwidth, 200))
+        alert.cancelButton.addTarget(self, action: "dissmissAddProjectAlert", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(alert)
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func addProjectButtonPressed(sender: AnyObject) {
 
+        UIView.animateWithDuration(0.3, animations: {
+            
+            self.alert.frame.origin.y = 150
+        })
+    }
+    
+    func dissmissAddProjectAlert(){
+        UIView.animateWithDuration(0.3, animations: {
+            
+            self.alert.frame.origin.y = self.view.frame.height
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

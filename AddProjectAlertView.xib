@@ -56,7 +56,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGZ-0d-KsW">
-                            <rect key="frame" x="0.0" y="160" width="300" height="39"/>
+                            <rect key="frame" x="0.0" y="150" width="300" height="39"/>
                             <color key="backgroundColor" red="0.058823529409999999" green="0.22352941179999999" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
                             <state key="normal" title="CANCEL">
@@ -64,7 +64,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOF-hw-bOy">
-                            <rect key="frame" x="300" y="160" width="300" height="39"/>
+                            <rect key="frame" x="300" y="150" width="300" height="39"/>
                             <color key="backgroundColor" red="0.058823529409999999" green="0.22352941179999999" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="OSP-DIN" family="OSP-DIN" pointSize="25"/>
                             <state key="normal" title="DONE">
@@ -95,7 +95,7 @@
                         <constraint firstItem="TGZ-0d-KsW" firstAttribute="leading" secondItem="grG-hq-IAY" secondAttribute="leading" id="QWf-3L-ASJ"/>
                         <constraint firstAttribute="bottom" secondItem="TGZ-0d-KsW" secondAttribute="bottom" constant="-9" id="c2F-WT-dJr"/>
                         <constraint firstItem="DOF-hw-bOy" firstAttribute="leading" secondItem="TGZ-0d-KsW" secondAttribute="trailing" id="hIG-wU-Iae"/>
-                        <constraint firstAttribute="bottom" secondItem="DOF-hw-bOy" secondAttribute="bottom" constant="-10" id="kOv-KY-aGM"/>
+                        <constraint firstAttribute="bottom" secondItem="DOF-hw-bOy" secondAttribute="bottom" id="kOv-KY-aGM"/>
                         <constraint firstItem="cZB-bb-xX2" firstAttribute="top" secondItem="grG-hq-IAY" secondAttribute="top" constant="14" id="mEW-sR-Ilk"/>
                         <constraint firstItem="CZV-DT-QZK" firstAttribute="top" secondItem="PbD-Aq-hqp" secondAttribute="top" id="pB8-cq-QAh"/>
                         <constraint firstItem="BmE-Fy-3fc" firstAttribute="leading" secondItem="L27-xp-g5m" secondAttribute="trailing" constant="11" id="pX5-xg-bqL"/>
