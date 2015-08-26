@@ -840,7 +840,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mainView" destination="mfb-ie-50B" id="OiL-rx-WOI"/>
                         <outlet property="projectsTableView" destination="K6x-Ld-kgk" id="r54-WK-Nww"/>
+                        <outlet property="topView" destination="P8X-1A-Tzo" id="LB2-8b-cbF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oee-gI-fMv" sceneMemberID="firstResponder"/>

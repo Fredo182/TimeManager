@@ -8,14 +8,17 @@
 
 import UIKit
 
-class ProjectsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ProjectsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     var chargecode = ["EW3003100", "AWWW00135"]
     var projects = ["AME", "SVMS"]
     var alert:AddProjectAlertView!
+    var overlay:UIView!
     
     @IBOutlet var projectsTableView: UITableView!
     
+    @IBOutlet var mainView: UIView!
+    @IBOutlet var topView: UIView!
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -49,8 +52,17 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         let screenwidth = self.view.frame.size.width
         let screenheight = self.view.frame.size.height
         
+        overlay = UIView(frame: CGRectMake(0, 0, screenwidth, screenheight))
+        overlay.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+        overlay.hidden = true
+        
         alert = AddProjectAlertView(frame:CGRectMake(0, screenheight ,screenwidth, 200))
         alert.cancelButton.addTarget(self, action: "dissmissAddProjectAlert", forControlEvents: UIControlEvents.TouchUpInside)
+        alert.doneButton.addTarget(self, action: "doneAddProjectAlert", forControlEvents: UIControlEvents.TouchUpInside)
+        alert.projectName.delegate = self
+        alert.chargeCode.delegate = self
+        
+        self.view.addSubview(overlay)
         self.view.addSubview(alert)
         
 
@@ -59,18 +71,15 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     @IBAction func addProjectButtonPressed(sender: AnyObject) {
-
-        UIView.animateWithDuration(0.3, animations: {
-            
-            self.alert.frame.origin.y = 150
-        })
+        toggleAddProjectAlert(true)
     }
     
     func dissmissAddProjectAlert(){
-        UIView.animateWithDuration(0.3, animations: {
-            
-            self.alert.frame.origin.y = self.view.frame.height
-        })
+        toggleAddProjectAlert(false)
+    }
+    
+    func doneAddProjectAlert(){
+        toggleAddProjectAlert(false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,6 +87,65 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func toggleAddProjectAlert(show:Bool) {
+        if(show)
+        {
+            UIView.animateWithDuration(0.3, animations: {
+                self.alert.frame.origin.y = 150
+            })
+            
+            mainView.userInteractionEnabled = false
+            topView.userInteractionEnabled = false
+            
+            overlay.hidden = false
+            
+        }
+        else
+        {
+            dismissKeyboard()
+            
+            alert.projectName.text = ""
+            alert.chargeCode.text = ""
+            
+            UIView.animateWithDuration(0.3, animations: {
+                self.alert.frame.origin.y = self.view.frame.height
+            })
+            mainView.userInteractionEnabled = true
+            topView.userInteractionEnabled = true
+            
+            overlay.hidden = true
+        }
+    }
+    
+    func dismissKeyboard(){
+        alert.chargeCode.resignFirstResponder()
+        alert.projectName.resignFirstResponder()
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        
+        if let touch = touches.first {
+            let point = touch.locationInView(self.view)
+            if(!CGRectContainsPoint(alert.frame, point))
+            {
+                toggleAddProjectAlert(false)
+                super.touchesBegan(touches, withEvent: event)
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if(textField == alert.projectName)
+        {
+            alert.chargeCode.becomeFirstResponder()
+        }
+        else
+        {
+            doneAddProjectAlert()
+        }
+        return true;
+    }
 
     /*
     // MARK: - Navigation
