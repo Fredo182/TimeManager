@@ -35,10 +35,32 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.projectNameLabel.text = projects[indexPath.row]
         
         cell.backgroundColor = UIColor.clearColor()
+        cell.selectionStyle = .None
         
         
         return cell
     }
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // Do something when selected
+    }
+    
+    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            // TODO: DELETE from the list
+        }
+    }
+    
     
     
     override func viewDidLoad() {
