@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 enum Day {
     case Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
@@ -16,38 +17,12 @@ enum Month {
     case Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
 }
 
-class Project {
-    var name: String
-    var chargecode: String
-    
-    init(name: String,chargecode: String) {
-        self.name = name
-        self.chargecode = chargecode
-    }
+class Project: NSManagedObject {
+    @NSManaged var projectName: String
+    @NSManaged var chargeCode: String
 }
 
-class Charge {
-    var project: Project
-    var time: Float
-    
-    init(project: Project){
-        self.project = project
-        self.time = 0.0
-    }
-    
-    init(project: Project, time: Float){
-        self.project = project
-        self.time = time
-    }
-    
-    init(name:String, chargecode: String){
-        self.project = Project(name: name, chargecode: chargecode)
-        self.time = 0.0
-    }
-    
-    init(name: String, chargecode: String, time:Float)
-    {
-        self.project = Project(name: name, chargecode: chargecode)
-        self.time = time;
-    }
+class Charge: NSManagedObject {
+    @NSManaged var project: Project
+    @NSManaged var time: Float
 }

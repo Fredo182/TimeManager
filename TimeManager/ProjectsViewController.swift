@@ -7,59 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
 class ProjectsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
-    var chargecode = ["EW3003100", "AWWW00135"]
-    var projects = ["AME", "SVMS"]
+    var projects = [Project]()
+    
     var alert:AddProjectAlertView!
     var overlay:UIView!
+    
+    var appDel:AppDelegate!
+    var context:NSManagedObjectContext!
     
     @IBOutlet var projectsTableView: UITableView!
     
     @IBOutlet var mainView: UIView!
     @IBOutlet var topView: UIView!
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    // Numver of items in the list
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return projects.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("projectcell", forIndexPath: indexPath) as! ProjectCell
-        
-        cell.chargeCodeLabel.text = chargecode[indexPath.row]
-        cell.projectNameLabel.text = projects[indexPath.row]
-        cell.backgroundColor = .clearColor()
-        cell.selectionStyle = .None
-        
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // Do something when selected
-    }
-    
-    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
-        let cell  = tableView.cellForRowAtIndexPath(indexPath)
-        cell!.contentView.backgroundColor = .clearColor()
-    }
-    
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            // TODO: DELETE from the list
-        }
-    }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +40,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         overlay.hidden = true
         
         alert = AddProjectAlertView(frame:CGRectMake(0, screenheight ,screenwidth, 200))
-        alert.cancelButton.addTarget(self, action: "dissmissAddProjectAlert", forControlEvents: UIControlEvents.TouchUpInside)
+        alert.cancelButton.addTarget(self, action: "cancelAddProjectAlert", forControlEvents: UIControlEvents.TouchUpInside)
         alert.doneButton.addTarget(self, action: "doneAddProjectAlert", forControlEvents: UIControlEvents.TouchUpInside)
         alert.projectName.delegate = self
         alert.chargeCode.delegate = self
@@ -85,29 +48,38 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.view.addSubview(overlay)
         self.view.addSubview(alert)
         
+        // Get context from delegate for core data
+        appDel = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        context = appDel.managedObjectContext
 
-        // Do any additional setup after loading the view.
+        // Load the projects
+        loadProjects()
+        projectsTableView.reloadData()
     }
     
-    
+    /********************************************************************************************
+    // Button Actions.
+    *********************************************************************************************/
     @IBAction func addProjectButtonPressed(sender: AnyObject) {
         toggleAddProjectAlert(true)
     }
     
-    func dissmissAddProjectAlert(){
+    func cancelAddProjectAlert(){
         toggleAddProjectAlert(false)
     }
     
     func doneAddProjectAlert(){
+        if((alert.projectName.text != "" && alert.chargeCode.text != ""))
+        {
+            saveProject()
+            projectsTableView.reloadData()
+        }
         toggleAddProjectAlert(false)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+    /********************************************************************************************
+    // Alert View methods
+    *********************************************************************************************/
     func toggleAddProjectAlert(show:Bool) {
         if(show)
         {
@@ -138,11 +110,6 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    func dismissKeyboard(){
-        alert.chargeCode.resignFirstResponder()
-        alert.projectName.resignFirstResponder()
-    }
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         
         if let touch = touches.first {
@@ -153,6 +120,15 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
                 super.touchesBegan(touches, withEvent: event)
             }
         }
+    }
+    
+    /********************************************************************************************
+    // First Responder, Keyboard methods
+    *********************************************************************************************/
+    
+    func dismissKeyboard(){
+        alert.chargeCode.resignFirstResponder()
+        alert.projectName.resignFirstResponder()
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -167,14 +143,92 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         return true;
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    /********************************************************************************************
+    // Core Data Methods
+    *********************************************************************************************/
+    func saveProject(){
+        
+        let newProject = NSEntityDescription.insertNewObjectForEntityForName("Project", inManagedObjectContext: context) as! Project
+        
+        newProject.setValue(alert.projectName.text, forKey: "projectName")
+        newProject.setValue(alert.chargeCode.text, forKey: "chargeCode")
+        
+        // Save the context.
+        do {
+            try context.save()
+            projects.append(newProject)
+        } catch {
+            print("Error Saving Projects: \(error)")
+        }
     }
-    */
+    
+    func loadProjects(){
+        
+        let request = NSFetchRequest(entityName: "Project")
+        
+        do {
+            let results:NSArray = try context.executeFetchRequest(request) as! [Project]
+            
+            for project in results
+            {
+                projects.append(project as! Project)
+            }
+        } catch {
+            print("Error Loading Projects: \(error)")
+        }
+    }
+    
+    func deleteProject(){
+        
+    }
+    
+    /********************************************************************************************
+    // UITableViewDelegate Methods
+    *********************************************************************************************/
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    // Numver of items in the list
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return projects.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("projectcell", forIndexPath: indexPath) as! ProjectCell
+        
+        cell.chargeCodeLabel.text = projects[indexPath.row].chargeCode
+        cell.projectNameLabel.text = projects[indexPath.row].projectName
+        cell.backgroundColor = .clearColor()
+        cell.selectionStyle = .None
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // Do something when selected
+    }
+    
+    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            // TODO: DELETE from the list
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 
 }
