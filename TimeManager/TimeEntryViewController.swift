@@ -70,8 +70,20 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     @IBAction func saveButtonPressed(sender: AnyObject) {
+        
         let project = projects.filter{ $0.projectName == projectLabel.text }.first
         print("Project: \(project?.projectName) charge: \(project?.chargeCode)")
+        
+        let d = NSDate()
+        print (d.currentTime())
+        print (d.printTime())
+        
+        let startHours = hoursArray[startTimePicker.selectedRowInComponent(0)]
+        let startMin = minuteArray[startTimePicker.selectedRowInComponent(1)]
+        let startSuffix = suffixArray[startTimePicker.selectedRowInComponent(2)]
+        
+        
+        print(startHours + startMin + startSuffix)
         
         
     }
