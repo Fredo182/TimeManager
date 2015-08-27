@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -22,11 +23,20 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     let hoursArray = ["1","2","3","4","5","6","7","8","9","10","11","12"]
     let minuteArray = ["00", "06", "12", "18", "24", "30", "36", "42", "48", "54"]
     let suffixArray = ["AM", "PM"]
-    var projectsArray = [String]()
+    var projects = [Project]()
+    
+    var appDel:AppDelegate!
+    var context:NSManagedObjectContext!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        projectsArray = ["AME","SVMS", "MOB"]
+        
+        // Get context from delegate for core data
+        appDel = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        context = appDel.managedObjectContext
+        
+        loadProjects()
+        projectPicker.reloadAllComponents()
         
         // Set the default picker values
         startTimePicker.selectRow(7, inComponent: 0, animated: true)
@@ -44,8 +54,31 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Dispose of any resources that can be recreated.
     }
     
+    func loadProjects(){
+        
+        let request = NSFetchRequest(entityName: "Project")
+        
+        do {
+            let results:NSArray = try context.executeFetchRequest(request) as! [Project]
+            
+            for project in results
+            {
+                projects.append(project as! Project)
+            }
+        } catch {
+            print("Error Loading Projects: \(error)")
+        }
+    }
+    @IBAction func saveButtonPressed(sender: AnyObject) {
+        let project = projects.filter{ $0.projectName == projectLabel.text }.first
+        print("Project: \(project?.projectName) charge: \(project?.chargeCode)")
+        
+        
+    }
     
-    // MARK: UIPICKER DELEGATE METHODS
+    /********************************************************************************************
+    // UIPickerView Methods
+    *********************************************************************************************/
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         
         if pickerView.tag == 0 || pickerView.tag == 1 {
@@ -71,7 +104,7 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
         }
         else{
-            return  projectsArray.count
+            return  projects.count
         }
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -87,7 +120,7 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
         }
         else{
-            return projectsArray[row]
+            return projects[row].projectName
         }
 
     }
@@ -114,7 +147,7 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
         }
         else{
-            projectLabel.text = "\(projectsArray[row])"
+            projectLabel.text = "\(projects[row].projectName)"
         }
     }
     
@@ -144,7 +177,7 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
         }
         else{
-            pickerLabel.text = projectsArray[row]
+            pickerLabel.text = projects[row].projectName
             return pickerLabel
         }
 

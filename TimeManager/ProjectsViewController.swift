@@ -178,8 +178,24 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    func deleteProject(){
+    func deleteProject(project : Project) -> Bool {
         
+        let predicate = NSPredicate(format: "projectName == %@", project.projectName)
+        let request = NSFetchRequest(entityName: "Project")
+        request.predicate = predicate
+        
+        
+        do{
+            let results = try context.executeFetchRequest(request) as! [Project]
+            let deleteProject = results.first
+            context.deleteObject(deleteProject!)
+            try context.save()
+            return true
+            
+        } catch {
+            print("Error deleting Project")
+            return false
+        }
     }
     
     /********************************************************************************************
@@ -221,7 +237,12 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            // TODO: DELETE from the list
+            let p = projects[indexPath.row]
+            if(deleteProject(p))
+            {
+                projects.removeAtIndex(indexPath.row)
+            }
+            projectsTableView.reloadData()
         }
     }
     
