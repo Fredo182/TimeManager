@@ -109,9 +109,7 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Get Project class from the value in the picker
         project = projects.filter{ $0.projectName == projectLabel.text }.first
         print("Project: \(project?.projectName) charge: \(project?.chargeCode)")
-        
-        currentDate = NSDate()
-        
+                
         // Get values from the pickers
         let startHours = hoursArray[startTimePicker.selectedRowInComponent(0)]
         let startMin = minuteArray[startTimePicker.selectedRowInComponent(1)]
@@ -359,14 +357,11 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "returnTableView" {
+            let destController = segue.destinationViewController as! TableViewController
+            destController.date = currentDate
+        }
     }
-    */
 
 }

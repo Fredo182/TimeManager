@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
 
     
     @IBOutlet var dateScrollView: UIScrollView!
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         /**************************************************************************************************/
         /*       TEST PROJECT CHARGE SCROLL VIEW                   */
         
-        
+        projectScrollView.delegate = self
         self.projectScrollView.frame.size.width = screenwidth
         self.projectScrollView.frame.size.height = 80
         
@@ -82,6 +82,11 @@ class ViewController: UIViewController {
         self.progressbar.textLabel.text          = "9.5";
         self.progressbar.textLabel.font          = UIFont(name: "OSP-DIN", size: 150);
         /**************************************************************************************************/
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        // DO SOMETHING WHEN THE PAGE SWITCHED
+        print("Scroll changed")
     }
 
     override func didReceiveMemoryWarning() {
@@ -180,7 +185,9 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTableView" {
-            print ("NEXT VIEW")
+            let destController = segue.destinationViewController as! TableViewController
+            destController.date = NSDate()
+            print("Setting new date: \(destController.date.printTime())")
         }
     }
 }

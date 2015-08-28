@@ -16,6 +16,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     var stoptimes = ["11:30AM", "3:48PM"]
     var projects = ["AME", "SVMS"]
     
+    @IBOutlet var headerLabel: UILabel!
     var charges = [Charge]()
     var date:NSDate!
     
@@ -27,6 +28,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        headerLabel.text = "\(date.shortDay()) \(date.shortMonth()) \(date.shortDate()) \(date.year)"
+        
         // Get context from delegate for core data
         appDel = (UIApplication.sharedApplication().delegate as! AppDelegate)
         context = appDel.managedObjectContext
@@ -36,31 +39,40 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.backgroundColor = UIColor.clearColor()
         tableView.tableFooterView = UIView(frame:CGRectZero)
         tableView.separatorColor = UIColor.clearColor()
-        
+                
         loadCharges()
         tableView.reloadData()
 
     }
     
     func loadCharges(){
+        let predicate = NSPredicate(format: "dateKey == %@", date.toKey())
         let request = NSFetchRequest(entityName: "Charge")
+        request.predicate = predicate
         do {
             let results:NSArray = try context.executeFetchRequest(request) as! [Charge]
             
             for charge in results
             {
-                let c = charge as! Charge
-                print("Saved Charge start: \(c.startTime.printTime())")
-                print("Saved Charge stop: \(c.stopTime.printTime())")
-                print("Saved Charge time: \(c.time)")
-                print("Saved Charge datekey: \(c.dateKey)")
-                print("Saved Charge project name: \(c.project.projectName)")
-                print("Saved Charge charge code: \(c.project.chargeCode)")
-                
+                charges.append(charge as! Charge)
             }
         } catch {
             print("Error Loading Projects: \(error)")
         }
+    }
+    
+    func deleteCharge(charge : Charge) -> Bool {
+        
+        do{
+            let results = try context.existingObjectWithID(charge.objectID)
+            context.deleteObject(results)
+            try context.save()
+            return true
+            
+        } catch {
+            print ("Error deleting charge")
+            return false
+        }    
     }
     
     /********************************************************************************************
@@ -72,20 +84,19 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // Numver of items in the list
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numbers.count
+        return charges.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TimeEntryCell
         
-        cell.totalTimeLabel.text = numbers[indexPath.row]
-        cell.startTimeLabel.text = starttimes[indexPath.row]
-        cell.stopTimeLabel.text = stoptimes[indexPath.row]
-        cell.projectNameLabel.text = projects[indexPath.row]
+        cell.totalTimeLabel.text = "\(charges[indexPath.row].time) hr"
+        cell.startTimeLabel.text = charges[indexPath.row].startTime.shortTime()
+        cell.stopTimeLabel.text = charges[indexPath.row].stopTime.shortTime()
+        cell.projectNameLabel.text = charges[indexPath.row].project.projectName
         
         cell.backgroundColor = UIColor.clearColor()
         cell.selectionStyle = .None
-        
         
         return cell
     }
@@ -105,7 +116,11 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            // TODO: DELETE from the list
+            if(deleteCharge(charges[indexPath.row]))
+            {
+                charges.removeAtIndex(indexPath.row)
+                tableView.reloadData()
+            }
         }
     }
 
@@ -114,15 +129,12 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showTimeEntry" {
+            let destController = segue.destinationViewController as! TimeEntryViewController
+            destController.currentDate = date
+        }
     }
-    */
+
 
 }

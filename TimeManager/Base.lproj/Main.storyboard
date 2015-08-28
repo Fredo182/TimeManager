@@ -362,7 +362,7 @@
                                         </constraints>
                                         <state key="normal" image="plus"/>
                                         <connections>
-                                            <segue destination="6mL-0G-cLs" kind="show" id="pzb-mW-1wu"/>
+                                            <segue destination="6mL-0G-cLs" kind="show" identifier="showTimeEntry" id="pzb-mW-1wu"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue Aug 4 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxK-Re-2m4">
@@ -397,6 +397,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerLabel" destination="rxK-Re-2m4" id="gYj-l9-TDR"/>
                         <outlet property="tableView" destination="eQ8-yo-BjF" id="jwr-d5-nmu"/>
                     </connections>
                 </viewController>

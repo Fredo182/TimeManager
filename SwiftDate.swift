@@ -764,6 +764,10 @@ public extension NSDate {
         return self.toString(format: DateFormat.Custom("MMM dd EEE hh:mm a"))
     }
     
+    public func shortTime() -> String {
+        return self.toString(format: DateFormat.Custom("hh:mma"))
+    }
+    
     public func toKey() -> String {
         return self.toString(format: DateFormat.Custom("MMddyyyy"))
     }
