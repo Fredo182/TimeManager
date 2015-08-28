@@ -34,6 +34,8 @@
 		07B02C7C1B79A86E002EE40D /* DatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B02C7B1B79A86E002EE40D /* DatesView.swift */; };
 		07B432111B798E5A0085D9BC /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B4320E1B798E5A0085D9BC /* NibDesignable.swift */; };
 		07CBFB1A1B82C1B80040AEF9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBFB191B82C1B80040AEF9 /* TableViewController.swift */; };
+		07DF2E911B90FBF3002B76E7 /* AlertMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07DF2E901B90FBF3002B76E7 /* AlertMessage.xib */; };
+		07DF2E931B90FFF1002B76E7 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DF2E921B90FFF1002B76E7 /* AlertMessage.swift */; };
 		07FF48DA1B76A94D00B2881C /* documentation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07FF48D91B76A94D00B2881C /* documentation.txt */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		07B02C7B1B79A86E002EE40D /* DatesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatesView.swift; path = TimeManager/DatesView.swift; sourceTree = "<group>"; };
 		07B4320E1B798E5A0085D9BC /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibDesignable.swift; path = TimeManager/NibDesignable.swift; sourceTree = "<group>"; };
 		07CBFB191B82C1B80040AEF9 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		07DF2E901B90FBF3002B76E7 /* AlertMessage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertMessage.xib; sourceTree = "<group>"; };
+		07DF2E921B90FFF1002B76E7 /* AlertMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		07FF48D91B76A94D00B2881C /* documentation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = documentation.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +173,8 @@
 				077074961B7B0E3B00C008E8 /* UIButtonScrollView.swift */,
 				075170B01B8993DB00F64B39 /* AddProjectAlertView.xib */,
 				075170B21B899EAE00F64B39 /* AddProjectAlertView.swift */,
+				07DF2E901B90FBF3002B76E7 /* AlertMessage.xib */,
+				07DF2E921B90FFF1002B76E7 /* AlertMessage.swift */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 				07038F601B758F7A00D419B9 /* LaunchScreen.storyboard in Resources */,
 				07038F6A1B75BC7500D419B9 /* OSP-DIN.ttf in Resources */,
 				075170B11B8993DB00F64B39 /* AddProjectAlertView.xib in Resources */,
+				07DF2E911B90FBF3002B76E7 /* AlertMessage.xib in Resources */,
 				07B02C7A1B79A848002EE40D /* DatesView.xib in Resources */,
 				07038F5D1B758F7A00D419B9 /* Assets.xcassets in Resources */,
 				07038F581B758F7A00D419B9 /* Main.storyboard in Resources */,
@@ -262,6 +269,7 @@
 				07848D271B86BAE70097AAD7 /* TimeEntryViewController.swift in Sources */,
 				07038F5B1B758F7A00D419B9 /* TimeManager.xcdatamodeld in Sources */,
 				0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */,
+				07DF2E931B90FFF1002B76E7 /* AlertMessage.swift in Sources */,
 				078C10891B8983DC006E1681 /* ProjectsViewController.swift in Sources */,
 				072C412D1B82D15600996574 /* SwiftDate.swift in Sources */,
 				075170B31B899EAE00F64B39 /* AddProjectAlertView.swift in Sources */,

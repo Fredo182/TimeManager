@@ -24,5 +24,8 @@ class Project: NSManagedObject {
 
 class Charge: NSManagedObject {
     @NSManaged var project: Project
-    @NSManaged var time: Float
+    @NSManaged var startTime: NSDate
+    @NSManaged var stopTime: NSDate
+    @NSManaged var time: Double
+    @NSManaged var dateKey: String
 }

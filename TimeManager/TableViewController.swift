@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
@@ -15,8 +16,56 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     var stoptimes = ["11:30AM", "3:48PM"]
     var projects = ["AME", "SVMS"]
     
+    var charges = [Charge]()
+    var date:NSDate!
+    
+    var appDel:AppDelegate!
+    var context:NSManagedObjectContext!
+    
     @IBOutlet var tableView: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Get context from delegate for core data
+        appDel = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        context = appDel.managedObjectContext
+        
+        // Table view stuff
+        tableView.dataSource = self
+        tableView.backgroundColor = UIColor.clearColor()
+        tableView.tableFooterView = UIView(frame:CGRectZero)
+        tableView.separatorColor = UIColor.clearColor()
+        
+        loadCharges()
+        tableView.reloadData()
+
+    }
+    
+    func loadCharges(){
+        let request = NSFetchRequest(entityName: "Charge")
+        do {
+            let results:NSArray = try context.executeFetchRequest(request) as! [Charge]
+            
+            for charge in results
+            {
+                let c = charge as! Charge
+                print("Saved Charge start: \(c.startTime.printTime())")
+                print("Saved Charge stop: \(c.stopTime.printTime())")
+                print("Saved Charge time: \(c.time)")
+                print("Saved Charge datekey: \(c.dateKey)")
+                print("Saved Charge project name: \(c.project.projectName)")
+                print("Saved Charge charge code: \(c.project.chargeCode)")
+                
+            }
+        } catch {
+            print("Error Loading Projects: \(error)")
+        }
+    }
+    
+    /********************************************************************************************
+    // UITableViewDelegate Methods
+    *********************************************************************************************/
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -41,7 +90,6 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Do something when selected
     }
@@ -59,19 +107,6 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             // TODO: DELETE from the list
         }
-    }
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.dataSource = self
-        tableView.backgroundColor = UIColor.clearColor()
-        tableView.tableFooterView = UIView(frame:CGRectZero)
-        tableView.separatorColor = UIColor.clearColor()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

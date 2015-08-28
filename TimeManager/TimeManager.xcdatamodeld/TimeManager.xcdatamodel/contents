@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8166.2" systemVersion="14E46" minimumToolsVersion="Automatic">
+    <entity name="Charge" representedClassName=".Charge" syncable="YES">
+        <attribute name="dateKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stopTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" syncable="YES"/>
+    </entity>
     <entity name="Project" representedClassName=".Project" syncable="YES">
         <attribute name="chargeCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="projectName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="charge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Charge" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Project" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Project" positionX="6282" positionY="-885" width="128" height="88"/>
+        <element name="Charge" positionX="6489" positionY="-891" width="128" height="118"/>
     </elements>
 </model>

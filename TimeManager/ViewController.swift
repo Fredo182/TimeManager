@@ -62,9 +62,6 @@ class ViewController: UIViewController {
         /**************************************************************************************************/
         
         
-        
-        
-        
         /**************************************************************************************************/
         /*       TEST PROGRESS BAR VIEW                   */
         
@@ -174,12 +171,17 @@ class ViewController: UIViewController {
         
     }
     
-    
     /****************************************************************************************
     * This function will return the main theme color
     *****************************************************************************************/
     func blueColor () -> UIColor {
         return UIColor(red: 15.0/255, green: 57.0/255, blue: 119.0/255, alpha: 1.0)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showTableView" {
+            print ("NEXT VIEW")
+        }
     }
 }
 

@@ -150,8 +150,8 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let newProject = NSEntityDescription.insertNewObjectForEntityForName("Project", inManagedObjectContext: context) as! Project
         
-        newProject.setValue(alert.projectName.text, forKey: "projectName")
-        newProject.setValue(alert.chargeCode.text, forKey: "chargeCode")
+        newProject.projectName = alert.projectName.text!
+        newProject.chargeCode = alert.chargeCode.text!
         
         // Save the context.
         do {

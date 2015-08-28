@@ -761,7 +761,7 @@ public extension NSDate {
     }
     
     public func printTime() -> String {
-        return self.toString(format: DateFormat.Custom("MMM dd EEE hh:mm"))
+        return self.toString(format: DateFormat.Custom("MMM dd EEE hh:mm a"))
     }
     
     public func toKey() -> String {

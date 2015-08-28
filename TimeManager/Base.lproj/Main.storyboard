@@ -59,7 +59,7 @@
                                             <constraint firstAttribute="height" constant="70" id="Cww-7N-eVE"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="XD4-y8-HWg" kind="show" id="tuj-TS-Feu"/>
+                                            <segue destination="XD4-y8-HWg" kind="show" identifier="showTableView" id="tuj-TS-Feu"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEC-T1-NYg">
@@ -619,7 +619,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <segue destination="XD4-y8-HWg" kind="show" id="bgS-53-QuH"/>
+                                            <segue destination="XD4-y8-HWg" kind="show" identifier="returnTableView" id="bgS-53-QuH"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TI9-YZ-yxg">
@@ -651,12 +651,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mainView" destination="BUI-ds-UMh" id="JqX-ph-jUW"/>
                         <outlet property="projectLabel" destination="8ES-HO-Sd3" id="msS-2s-lJb"/>
                         <outlet property="projectPicker" destination="HOn-0t-E2X" id="rGA-Yt-Ftb"/>
                         <outlet property="startTimeLabel" destination="V75-kw-nbu" id="cTe-yW-OPH"/>
                         <outlet property="startTimePicker" destination="kLw-Hh-w8b" id="DiQ-WM-uyC"/>
                         <outlet property="stopTimeLabel" destination="ywc-EC-rQM" id="ZEb-Ah-CBu"/>
                         <outlet property="stopTimePicker" destination="8m9-xZ-Vvt" id="Wfg-OW-CYH"/>
+                        <outlet property="topView" destination="F5V-zr-53t" id="b6f-pN-xVO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJX-6r-Fgw" sceneMemberID="firstResponder"/>
@@ -863,7 +865,7 @@
         <image name="stopwatch" width="498" height="599"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tuj-TS-Feu"/>
         <segue reference="oaU-my-BuN"/>
+        <segue reference="tuj-TS-Feu"/>
     </inferredMetricsTieBreakers>
 </document>
