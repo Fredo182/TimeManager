@@ -68,7 +68,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // DO SOMETHING WHEN THE PAGE SWITCHED
         let page = scrollView.contentOffset.x / scrollView.frame.size.width;
         let index:Int = Int(page)
-        print(index)
+        var total = CGFloat(0)
+        
+        for p in projectCharges
+        {
+            total += CGFloat(p.time)
+        }
+        
+        progressbar.textLabel.text = "\(projectCharges[index].time)"
+        progressbar.percentage = CGFloat(projectCharges[index].time)/total
         
     }
 
@@ -78,22 +86,26 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func calcCharges(){
-        var p = [String:Double]()
+        var p = [Project:Double]()
         
         for charge in charges
         {
-            if((p[charge.project.projectName]) != nil)
+            if((p[charge.project]) != nil)
             {
-                p[charge.project.projectName] = p[charge.project.projectName]! + charge.time
+                p[charge.project] = p[charge.project]! + charge.time
             }
             else
             {
-                p[charge.project.projectName] = charge.time
+                p[charge.project] = charge.time
             }
         }
         
-        print(p)
-        
+        for (p,v) in p {
+            let projectCharge = ProjectCharge()
+            projectCharge.project = p
+            projectCharge.time = v
+            projectCharges.append(projectCharge)
+        }
     }
     
     func createProjectScrollView(){
