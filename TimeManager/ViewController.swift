@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UIScrollViewDelegate {
 
@@ -16,50 +17,29 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var progressbar: MCPercentageDoughnutView!
     
     var DatesArray: [NSDate] = []
+    var charges: [Charge] = []
+    var projectCharges: [ProjectCharge] = []
+    var selectedDate: NSDate!
+    var projectIndex: Int!
+    
+    var appDel:AppDelegate!
+    var context:NSManagedObjectContext!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-        loadDates();
-        loadDatesView();
+        // Get context from delegate for core data
+        appDel = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        context = appDel.managedObjectContext
         
-        let screenwidth = self.view.frame.size.width
-
-
-        /**************************************************************************************************/
-        /*       TEST PROJECT CHARGE SCROLL VIEW                   */
         
-        projectScrollView.delegate = self
-        self.projectScrollView.frame.size.width = screenwidth
-        self.projectScrollView.frame.size.height = 80
+        loadDates()
+        loadDatesView()
+        loadCharges()
         
-        let pview1 = ProjectView(frame:CGRectMake(0, 0,screenwidth, 80))
-        self.projectScrollView.addSubview(pview1);
-        
-        let pview2 = ProjectView(frame: CGRectMake(0, 0, screenwidth, 80))
-        var frame = pview1.frame
-        frame.origin.x = screenwidth
-        pview2.frame = frame
-        
-        pview2.chargeLabel.text = "AWWW00135"
-        pview2.projectLabel.text = "SVMS"
-        pview2.timeLabel.text = "3.2"
-        
-        self.projectScrollView.addSubview(pview2)
-        
-        let pview3 = ProjectView(frame: CGRectMake(0, 0, screenwidth, 80))
-        frame.origin.x = screenwidth * 2
-        pview3.frame = frame
-        
-        pview3.chargeLabel.text = "EBS500043"
-        pview3.projectLabel.text = "MOB"
-        pview3.timeLabel.text = "1.2"
-        
-        self.projectScrollView.addSubview(pview3)
-        
-        self.projectScrollView.contentSize = CGSizeMake(screenwidth * 3, self.projectScrollView.frame.size.height)
-
-        /**************************************************************************************************/
+        calcCharges()
+        createProjectScrollView()
         
         
         /**************************************************************************************************/
@@ -86,12 +66,99 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         // DO SOMETHING WHEN THE PAGE SWITCHED
-        print("Scroll changed")
+        let page = scrollView.contentOffset.x / scrollView.frame.size.width;
+        let index:Int = Int(page)
+        print(index)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func calcCharges(){
+        var p = [String:Double]()
+        
+        for charge in charges
+        {
+            if((p[charge.project.projectName]) != nil)
+            {
+                p[charge.project.projectName] = p[charge.project.projectName]! + charge.time
+            }
+            else
+            {
+                p[charge.project.projectName] = charge.time
+            }
+        }
+        
+        print(p)
+        
+    }
+    
+    func createProjectScrollView(){
+        
+        let screenwidth = self.view.frame.size.width
+        projectScrollView.delegate = self
+        self.projectScrollView.frame.size.width = screenwidth
+        self.projectScrollView.frame.size.height = 80
+        
+        
+        if(projectCharges.count > 0)
+        {
+            var frame:CGRect = CGRect()
+            for var i = 0; i < projectCharges.count; i++
+            {
+                if(i == 0)
+                {
+                    let projectView = ProjectView(frame:CGRectMake(0, 0,screenwidth, 80))
+                    projectView.chargeLabel.text = projectCharges[i].project.chargeCode
+                    projectView.projectLabel.text = projectCharges[i].project.projectName
+                    projectView.timeLabel.text = "\(projectCharges[i].time)"
+                    projectScrollView.addSubview(projectView);
+                    frame = projectView.frame
+                }
+                else
+                {
+                    let projectView = ProjectView(frame: CGRectMake(0, 0, screenwidth, 80))
+                    frame.origin.x = screenwidth * CGFloat(i)
+                    projectView.frame = frame
+                    projectView.chargeLabel.text = projectCharges[i].project.chargeCode
+                    projectView.projectLabel.text = projectCharges[i].project.projectName
+                    projectView.timeLabel.text = "\(projectCharges[i].time)"
+                    projectScrollView.addSubview(projectView)
+                }
+            }
+            
+            projectScrollView.contentSize = CGSizeMake(screenwidth * CGFloat(projectCharges.count), self.projectScrollView.frame.size.height)
+        }
+        else
+        {
+            let projectView = ProjectView(frame:CGRectMake(0, 0,screenwidth, 80))
+            self.projectScrollView.addSubview(projectView);
+            
+            projectScrollView.contentSize = CGSizeMake(screenwidth, self.projectScrollView.frame.size.height)
+        }
+    }
+    
+    /****************************************************************************************
+    * This function will load all of the charges and get a total of hours for each project
+    * and append it to the array
+    *****************************************************************************************/
+    func loadCharges(){
+        let predicate = NSPredicate(format: "dateKey == %@", selectedDate.toKey())
+        let request = NSFetchRequest(entityName: "Charge")
+        request.predicate = predicate
+        do {
+            let results:NSArray = try context.executeFetchRequest(request) as! [Charge]
+            
+            for charge in results
+            {
+                charges.append(charge as! Charge)
+            }
+        } catch {
+            print("Error Loading Projects: \(error)")
+        }
     }
     
     /****************************************************************************************
@@ -112,6 +179,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         // Append today in the middle of array
         DatesArray.append(today)
+        selectedDate = today
         
         // Get the next 7 days starting with earliest
         for var i = 1; i < 8; i++

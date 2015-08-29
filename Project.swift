@@ -29,3 +29,8 @@ class Charge: NSManagedObject {
     @NSManaged var time: Double
     @NSManaged var dateKey: String
 }
+
+class ProjectCharge {
+    var project: Project!
+    var time: Double!
+}
