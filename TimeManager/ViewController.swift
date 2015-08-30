@@ -43,6 +43,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         loadProgressBar()
     }
     
+    func dateButtonPressed(sender: UIButton!){
+        print("Button pressed: \(sender.tag)")
+    }
+    
     func loadProgressBar(){
         self.progressbar.textStyle               = MCPercentageDoughnutViewTextStyleUserDefined;
         self.progressbar.percentage              = 0.0;
@@ -119,7 +123,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         projectScrollView.delegate = self
         self.projectScrollView.frame.size.width = screenwidth
         self.projectScrollView.frame.size.height = 80
-        
         
         if(projectCharges.count > 0)
         {
@@ -226,6 +229,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             dview.firstNumberLabel.text = DatesArray[counter].shortDate()
             dview.firstDayLabel.text = DatesArray[counter].shortDay()
             dview.firstDateButton.tag = counter;
+            dview.firstDateButton.addTarget(self, action: "dateButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
             
             counter++
             
@@ -233,6 +237,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             dview.secondNumberLabel.text = DatesArray[counter].shortDate()
             dview.secondDayLabel.text = DatesArray[counter].shortDay()
             dview.secondDateButton.tag = counter;
+            dview.secondDateButton.addTarget(self, action: "dateButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
             
             // This one is always today. Set to color blue
             if(i == 2)
@@ -248,6 +253,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             dview.thirdNumberLabel.text = DatesArray[counter].shortDate()
             dview.thirdDayLabel.text = DatesArray[counter].shortDay()
             dview.thirdDateButton.tag = counter
+            dview.thirdDateButton.addTarget(self, action: "dateButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
             
             counter++
             
