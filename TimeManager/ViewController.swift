@@ -40,16 +40,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         calcCharges()
         createProjectScrollView()
-        
-        
-        /**************************************************************************************************/
-        /*       TEST PROGRESS BAR VIEW                   */
-        
+        loadProgressBar()
+    }
+    
+    func loadProgressBar(){
         self.progressbar.textStyle               = MCPercentageDoughnutViewTextStyleUserDefined;
-        self.progressbar.percentage              = 0.75;
+        self.progressbar.percentage              = 0.0;
         self.progressbar.linePercentage          = 0.15;
         self.progressbar.animationDuration       = 1.5;
-
+        
         self.progressbar.fillColor = blueColor()
         self.progressbar.roundedBackgroundImage = UIImage(named: "center");
         self.progressbar.roundedImageOverlapPercentage = 0.06;
@@ -59,10 +58,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.progressbar.animatesBegining        = true;
         
         self.progressbar.textLabel.textColor     = UIColor.whiteColor();
-        self.progressbar.textLabel.text          = "9.5";
+        self.progressbar.textLabel.text          = "0.0";
         self.progressbar.textLabel.font          = UIFont(name: "OSP-DIN", size: 150);
-        /**************************************************************************************************/
+        
+        if(projectCharges.count > 0)
+        {
+            scrollViewDidEndDecelerating(projectScrollView)
+        }
     }
+    
+
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         // DO SOMETHING WHEN THE PAGE SWITCHED
@@ -75,7 +80,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             total += CGFloat(p.time)
         }
         
-        progressbar.textLabel.text = "\(projectCharges[index].time)"
+        progressbar.textLabel.text = "\(total)"
         progressbar.percentage = CGFloat(projectCharges[index].time)/total
         
     }
