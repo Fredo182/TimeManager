@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     var projectCharges: [ProjectCharge] = []        // Charges grouped by project
     var selectedDate: NSDate!
     var projectIndex: Int!
+    var dateLabelsArray: [[UILabel!]] = []
     
     var appDel:AppDelegate!
     var context:NSManagedObjectContext!
@@ -50,6 +51,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         calcCharges()
         createProjectScrollView()
         scrollViewDidEndDecelerating(projectScrollView)
+        
+        resetDateLabelColors()
+        colorSelectedLabel(dateLabelsArray[sender.tag][0], number: dateLabelsArray[sender.tag][1], day: dateLabelsArray[sender.tag][2])
     }
     
     func loadProgressBar(){
@@ -238,10 +242,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     *****************************************************************************************/
     func loadDatesView() {
         
-        print("LOADING DATES VIEW")
-        print("SELECTED DATE: " + selectedDate.printTime())
-
-        
         let screenwidth = self.view.frame.size.width
         self.dateScrollView.frame.size.width = screenwidth
         self.dateScrollView.frame.size.height = 97
@@ -262,6 +262,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             {
                 colorSelectedLabel(dview.firstMonthLabel, number: dview.firstNumberLabel, day: dview.firstDayLabel)
             }
+            let firstLabelArray = [dview.firstMonthLabel, dview.firstNumberLabel, dview.firstDayLabel]
+            dateLabelsArray.append(firstLabelArray)
             
             counter++
             
@@ -275,6 +277,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             {
                 colorSelectedLabel(dview.secondMonthLabel, number: dview.secondNumberLabel, day: dview.secondDayLabel)
             }
+            let secondLabelArray = [dview.secondMonthLabel, dview.secondNumberLabel, dview.secondDayLabel]
+            dateLabelsArray.append(secondLabelArray)
             
             counter++
             
@@ -288,6 +292,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             {
                 colorSelectedLabel(dview.thirdMonthLabel, number: dview.thirdNumberLabel, day: dview.thirdDayLabel)
             }
+            let thirdLabelArray = [dview.thirdMonthLabel, dview.thirdNumberLabel, dview.thirdDayLabel]
+            dateLabelsArray.append(thirdLabelArray)
             
             counter++
             
@@ -318,6 +324,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         month.textColor = blueColor()
         number.textColor = blueColor()
         day.textColor = blueColor()
+    }
+    
+    func resetDateLabelColors()
+    {
+        for date in dateLabelsArray
+        {
+            date[0].textColor = .whiteColor()
+            date[1].textColor = .whiteColor()
+            date[2].textColor = .whiteColor()
+        }
     }
     
     /****************************************************************************************
