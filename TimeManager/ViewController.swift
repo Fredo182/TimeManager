@@ -238,6 +238,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     *****************************************************************************************/
     func loadDatesView() {
         
+        print("LOADING DATES VIEW")
+        print("SELECTED DATE: " + selectedDate.printTime())
+
+        
         let screenwidth = self.view.frame.size.width
         self.dateScrollView.frame.size.width = screenwidth
         self.dateScrollView.frame.size.height = 97
@@ -254,6 +258,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             dview.firstDayLabel.text = DatesArray[counter].shortDay()
             dview.firstDateButton.tag = counter;
             dview.firstDateButton.addTarget(self, action: "dateButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+            if(checkIfSelectedDate(DatesArray[counter]))
+            {
+                colorSelectedLabel(dview.firstMonthLabel, number: dview.firstNumberLabel, day: dview.firstDayLabel)
+            }
             
             counter++
             
@@ -263,12 +271,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             dview.secondDateButton.tag = counter;
             dview.secondDateButton.addTarget(self, action: "dateButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
             
-            // This one is always today. Set to color blue
-            if(i == 2)
+            if(checkIfSelectedDate(DatesArray[counter]))
             {
-                dview.secondMonthLabel.textColor = blueColor()
-                dview.secondNumberLabel.textColor = blueColor()
-                dview.secondDayLabel.textColor = blueColor()
+                colorSelectedLabel(dview.secondMonthLabel, number: dview.secondNumberLabel, day: dview.secondDayLabel)
             }
             
             counter++
@@ -278,6 +283,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             dview.thirdDayLabel.text = DatesArray[counter].shortDay()
             dview.thirdDateButton.tag = counter
             dview.thirdDateButton.addTarget(self, action: "dateButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+            
+            if(checkIfSelectedDate(DatesArray[counter]))
+            {
+                colorSelectedLabel(dview.thirdMonthLabel, number: dview.thirdNumberLabel, day: dview.thirdDayLabel)
+            }
             
             counter++
             
@@ -289,6 +299,25 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.dateScrollView.canCancelContentTouches = true
         self.dateScrollView.contentOffset.x = screenwidth * 2
         
+    }
+    
+    func checkIfSelectedDate(compareDate: NSDate) ->Bool {
+        print("Compare: " + compareDate.printTime() + " Selected: " + selectedDate.printTime())
+        
+        if(compareDate.shortMonth() == selectedDate.shortMonth() && compareDate.shortDate() == selectedDate.shortDate()) {
+            print("EQUAL")
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    func colorSelectedLabel(month: UILabel, number: UILabel, day: UILabel)
+    {
+        month.textColor = blueColor()
+        number.textColor = blueColor()
+        day.textColor = blueColor()
     }
     
     /****************************************************************************************
