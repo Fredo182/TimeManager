@@ -45,6 +45,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func dateButtonPressed(sender: UIButton!){
         print("Button pressed: \(sender.tag)")
+        print("Date: " + DatesArray[sender.tag].printTime())
     }
     
     func loadProgressBar(){
@@ -166,6 +167,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     * and append it to the array
     *****************************************************************************************/
     func loadCharges(){
+        
+        charges.removeAll()
+        
         let predicate = NSPredicate(format: "dateKey == %@", selectedDate.toKey())
         let request = NSFetchRequest(entityName: "Charge")
         request.predicate = predicate
@@ -208,6 +212,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             DatesArray.append(date)
         }
     }
+    
     /****************************************************************************************
     * This function loads all the dates into the scroll view. It will render all the
     * dates in order and in the end set the scrollview offset to start in the middle dates
