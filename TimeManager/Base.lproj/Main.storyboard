@@ -351,7 +351,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="pDW-J0-vC9"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="backToMain" id="pDW-J0-vC9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIP-wT-Q2D">
@@ -866,7 +866,7 @@
         <image name="stopwatch" width="498" height="599"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oaU-my-BuN"/>
+        <segue reference="pDW-J0-vC9"/>
         <segue reference="tuj-TS-Feu"/>
     </inferredMetricsTieBreakers>
 </document>

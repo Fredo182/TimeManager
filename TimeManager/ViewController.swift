@@ -17,8 +17,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var progressbar: MCPercentageDoughnutView!
     
     var DatesArray: [NSDate] = []
-    var charges: [Charge] = []
-    var projectCharges: [ProjectCharge] = []
+    var charges: [Charge] = []                      // All the charges not grouped
+    var projectCharges: [ProjectCharge] = []        // Charges grouped by project
     var selectedDate: NSDate!
     var projectIndex: Int!
     
@@ -33,19 +33,23 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         appDel = (UIApplication.sharedApplication().delegate as! AppDelegate)
         context = appDel.managedObjectContext
         
+        loadDates()                     // Create the dates
+        loadDatesView()                 // Render the dates in scrollview
         
-        loadDates()
-        loadDatesView()
-        loadCharges()
+        loadCharges()                   // Load charges for selectedDate
+        calcCharges()                   // Group and total the total hours for charges
         
-        calcCharges()
-        createProjectScrollView()
-        loadProgressBar()
+        createProjectScrollView()       // Create the projects scrollview
+        loadProgressBar()               // Render the circular progress bar
     }
     
     func dateButtonPressed(sender: UIButton!){
-        print("Button pressed: \(sender.tag)")
-        print("Date: " + DatesArray[sender.tag].printTime())
+        selectedDate = DatesArray[sender.tag];
+        print("Selected: \(selectedDate.printTime())")
+        loadCharges()
+        calcCharges()
+        createProjectScrollView()
+        scrollViewDidEndDecelerating(projectScrollView)
     }
     
     func loadProgressBar(){
@@ -73,9 +77,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
 
-    
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        // DO SOMETHING WHEN THE PAGE SWITCHED
         let page = scrollView.contentOffset.x / scrollView.frame.size.width;
         let index:Int = Int(page)
         var total = CGFloat(0)
@@ -85,8 +87,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             total += CGFloat(p.time)
         }
         
-        progressbar.textLabel.text = "\(total)"
-        progressbar.percentage = CGFloat(projectCharges[index].time)/total
+        if(projectCharges.count > 0) {
+            progressbar.textLabel.text = "\(total)"
+            progressbar.percentage = CGFloat(projectCharges[index].time)/total
+        }
+        else {
+            progressbar.textLabel.text = "0.0"
+            progressbar.percentage = CGFloat(0)
+        }
         
     }
 
@@ -96,8 +104,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func calcCharges(){
-        var p = [Project:Double]()
         
+        projectCharges.removeAll()
+        
+        var p = [Project:Double]()
         for charge in charges
         {
             if((p[charge.project]) != nil)
@@ -122,8 +132,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         let screenwidth = self.view.frame.size.width
         projectScrollView.delegate = self
-        self.projectScrollView.frame.size.width = screenwidth
-        self.projectScrollView.frame.size.height = 80
+        projectScrollView.frame.size.width = screenwidth
+        projectScrollView.frame.size.height = 80
+        
+        // first clear out subviews
+        let subviews = projectScrollView.subviews
+        for subview in subviews{
+            subview.removeFromSuperview()
+        }
         
         if(projectCharges.count > 0)
         {
@@ -162,9 +178,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    
     /****************************************************************************************
     * This function will load all of the charges and get a total of hours for each project
-    * and append it to the array
+    * and append it to the array. Not grouped by project yet.
     *****************************************************************************************/
     func loadCharges(){
         
@@ -203,7 +220,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         // Append today in the middle of array
         DatesArray.append(today)
-        selectedDate = today
+        if(selectedDate == nil) {
+            selectedDate = today
+        }
         
         // Get the next 7 days starting with earliest
         for var i = 1; i < 8; i++
@@ -282,7 +301,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTableView" {
             let destController = segue.destinationViewController as! TableViewController
-            destController.date = NSDate()
+            
+            destController.date = selectedDate
             print("Setting new date: \(destController.date.printTime())")
         }
     }

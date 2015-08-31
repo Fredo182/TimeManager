@@ -134,6 +134,10 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
             let destController = segue.destinationViewController as! TimeEntryViewController
             destController.currentDate = date
         }
+        else if segue.identifier == "backToMain" {
+            let destController = segue.destinationViewController as! ViewController
+            destController.selectedDate = date
+        }
     }
 
 
