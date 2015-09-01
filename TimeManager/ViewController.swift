@@ -12,6 +12,7 @@ import CoreData
 class ViewController: UIViewController, UIScrollViewDelegate {
 
     
+    @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var dateScrollView: UIScrollView!
     @IBOutlet var projectScrollView: UIScrollView!
     @IBOutlet weak var progressbar: MCPercentageDoughnutView!
@@ -33,6 +34,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Get context from delegate for core data
         appDel = (UIApplication.sharedApplication().delegate as! AppDelegate)
         context = appDel.managedObjectContext
+        
+        // Set the random background image
+        backgroundImage.image = appDel.backgroundImage
         
         loadDates()                     // Create the dates
         loadDatesView()                 // Render the dates in scrollview

@@ -11,6 +11,7 @@ import CoreData
 
 class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var startTimePicker: UIPickerView!
     @IBOutlet var stopTimePicker: UIPickerView!
     @IBOutlet var projectPicker: UIPickerView!
@@ -47,6 +48,9 @@ class TimeEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Get context from delegate for core data
         appDel = (UIApplication.sharedApplication().delegate as! AppDelegate)
         context = appDel.managedObjectContext
+        
+        //Set random back image
+        backgroundImage.image = appDel.backgroundImage
         
         // Overlay and alertview stuff
         let screenwidth = self.view.frame.size.width

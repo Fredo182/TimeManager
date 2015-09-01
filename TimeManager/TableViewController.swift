@@ -23,6 +23,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     var appDel:AppDelegate!
     var context:NSManagedObjectContext!
     
+    @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -33,6 +34,9 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Get context from delegate for core data
         appDel = (UIApplication.sharedApplication().delegate as! AppDelegate)
         context = appDel.managedObjectContext
+        
+        //Set random back image
+        backgroundImage.image = appDel.backgroundImage
         
         // Table view stuff
         tableView.dataSource = self

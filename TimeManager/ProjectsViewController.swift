@@ -20,6 +20,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     var context:NSManagedObjectContext!
     
     @IBOutlet var projectsTableView: UITableView!
+    @IBOutlet var backgroundImage: UIImageView!
     
     @IBOutlet var mainView: UIView!
     @IBOutlet var topView: UIView!
@@ -51,6 +52,9 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         // Get context from delegate for core data
         appDel = (UIApplication.sharedApplication().delegate as! AppDelegate)
         context = appDel.managedObjectContext
+        
+        //Set back image
+        backgroundImage.image = appDel.backgroundImage
 
         // Load the projects
         loadProjects()

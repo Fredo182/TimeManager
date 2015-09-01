@@ -49,7 +49,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTR-S8-D9j">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="whd-JE-xbI">
+                                    <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="whd-JE-xbI">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uR-yk-oST">
@@ -172,6 +172,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="whd-JE-xbI" id="PAd-XH-q7g"/>
                         <outlet property="dateScrollView" destination="GXn-OS-nmN" id="gA3-SF-pWH"/>
                         <outlet property="progressbar" destination="D3d-80-crq" id="CE9-TX-3cL"/>
                         <outlet property="projectScrollView" destination="sKK-ob-8n9" id="7p3-4g-UAP"/>
@@ -400,6 +401,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="EwN-EY-jdY" id="QDi-lg-BVr"/>
                         <outlet property="headerLabel" destination="rxK-Re-2m4" id="gYj-l9-TDR"/>
                         <outlet property="tableView" destination="eQ8-yo-BjF" id="jwr-d5-nmu"/>
                     </connections>
@@ -655,6 +657,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="ecU-Qb-fuh" id="KMl-L5-fIF"/>
                         <outlet property="mainView" destination="BUI-ds-UMh" id="JqX-ph-jUW"/>
                         <outlet property="projectLabel" destination="8ES-HO-Sd3" id="msS-2s-lJb"/>
                         <outlet property="projectPicker" destination="HOn-0t-E2X" id="rGA-Yt-Ftb"/>
@@ -850,6 +853,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="bKv-Y4-YRj" id="iyP-sw-GYP"/>
                         <outlet property="mainView" destination="mfb-ie-50B" id="OiL-rx-WOI"/>
                         <outlet property="projectsTableView" destination="K6x-Ld-kgk" id="r54-WK-Nww"/>
                         <outlet property="topView" destination="P8X-1A-Tzo" id="LB2-8b-cbF"/>
@@ -862,14 +866,14 @@
     </scenes>
     <resources>
         <image name="back" width="169" height="169"/>
-        <image name="image1" width="750" height="1334"/>
+        <image name="image1" width="415" height="737"/>
         <image name="logo" width="875" height="370"/>
         <image name="menu" width="256" height="164"/>
         <image name="plus" width="169" height="169"/>
         <image name="stopwatch" width="498" height="599"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pDW-J0-vC9"/>
+        <segue reference="oaU-my-BuN"/>
         <segue reference="28L-0o-m8P"/>
     </inferredMetricsTieBreakers>
 </document>
