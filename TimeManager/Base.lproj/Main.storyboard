@@ -59,7 +59,7 @@
                                             <constraint firstAttribute="height" constant="70" id="Cww-7N-eVE"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="XD4-y8-HWg" kind="show" identifier="showTableView" id="tuj-TS-Feu"/>
+                                            <segue destination="XD4-y8-HWg" kind="custom" identifier="showTableView" customClass="SlideLeftSegue" id="tuj-TS-Feu"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEC-T1-NYg">
@@ -124,7 +124,7 @@
                                         </constraints>
                                         <state key="normal" image="menu"/>
                                         <connections>
-                                            <segue destination="9uM-xT-gYx" kind="show" id="M2I-1p-dCg"/>
+                                            <segue destination="9uM-xT-gYx" kind="custom" customClass="SlideRightSegue" id="M2I-1p-dCg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4M-Hv-SM6">
@@ -351,7 +351,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="backToMain" id="pDW-J0-vC9"/>
+                                            <segue destination="BYZ-38-t0r" kind="custom" identifier="backToMain" customClass="SlideRightSegue" id="pDW-J0-vC9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIP-wT-Q2D">
@@ -362,7 +362,7 @@
                                         </constraints>
                                         <state key="normal" image="plus"/>
                                         <connections>
-                                            <segue destination="6mL-0G-cLs" kind="show" identifier="showTimeEntry" id="pzb-mW-1wu"/>
+                                            <segue destination="6mL-0G-cLs" kind="custom" identifier="showTimeEntry" customClass="SlideLeftSegue" id="pzb-mW-1wu"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue Aug 4 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxK-Re-2m4">
@@ -620,7 +620,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <segue destination="XD4-y8-HWg" kind="show" identifier="returnTableView" id="bgS-53-QuH"/>
+                                            <segue destination="XD4-y8-HWg" kind="custom" identifier="returnTableView" customClass="SlideRightSegue" id="bgS-53-QuH"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TI9-YZ-yxg">
@@ -801,7 +801,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="oaU-my-BuN"/>
+                                            <segue destination="BYZ-38-t0r" kind="custom" customClass="SlideLeftSegue" id="oaU-my-BuN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpd-D7-Ubl">
@@ -866,7 +866,7 @@
         <image name="stopwatch" width="498" height="599"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oaU-my-BuN"/>
-        <segue reference="tuj-TS-Feu"/>
+        <segue reference="bgS-53-QuH"/>
+        <segue reference="pDW-J0-vC9"/>
     </inferredMetricsTieBreakers>
 </document>

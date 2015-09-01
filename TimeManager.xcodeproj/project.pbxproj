@@ -30,6 +30,8 @@
 		07848D271B86BAE70097AAD7 /* TimeEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07848D261B86BAE70097AAD7 /* TimeEntryViewController.swift */; };
 		078C10891B8983DC006E1681 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078C10881B8983DC006E1681 /* ProjectsViewController.swift */; };
 		078C108B1B898415006E1681 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078C108A1B898415006E1681 /* ProjectCell.swift */; };
+		0798071D1B952550009AF58A /* SlideLeftSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798071C1B952550009AF58A /* SlideLeftSegue.swift */; };
+		0798071F1B952587009AF58A /* SlideRightSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798071E1B952587009AF58A /* SlideRightSegue.swift */; };
 		07B02C7A1B79A848002EE40D /* DatesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B02C791B79A848002EE40D /* DatesView.xib */; };
 		07B02C7C1B79A86E002EE40D /* DatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B02C7B1B79A86E002EE40D /* DatesView.swift */; };
 		07B432111B798E5A0085D9BC /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B4320E1B798E5A0085D9BC /* NibDesignable.swift */; };
@@ -73,6 +75,8 @@
 		07848D261B86BAE70097AAD7 /* TimeEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEntryViewController.swift; sourceTree = "<group>"; };
 		078C10881B8983DC006E1681 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		078C108A1B898415006E1681 /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		0798071C1B952550009AF58A /* SlideLeftSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideLeftSegue.swift; sourceTree = "<group>"; };
+		0798071E1B952587009AF58A /* SlideRightSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightSegue.swift; sourceTree = "<group>"; };
 		07B02C791B79A848002EE40D /* DatesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DatesView.xib; path = TimeManager/DatesView.xib; sourceTree = "<group>"; };
 		07B02C7B1B79A86E002EE40D /* DatesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatesView.swift; path = TimeManager/DatesView.swift; sourceTree = "<group>"; };
 		07B4320E1B798E5A0085D9BC /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibDesignable.swift; path = TimeManager/NibDesignable.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 		07848D1F1B857D7C0097AAD7 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				0798071B1B952518009AF58A /* Custom Segue */,
 				07228EBF1B7980BC007FD9BA /* ProjectView.swift */,
 				07228EC11B7980F8007FD9BA /* ProjectView.xib */,
 				07B02C791B79A848002EE40D /* DatesView.xib */,
@@ -177,6 +182,15 @@
 				07DF2E921B90FFF1002B76E7 /* AlertMessage.swift */,
 			);
 			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		0798071B1B952518009AF58A /* Custom Segue */ = {
+			isa = PBXGroup;
+			children = (
+				0798071C1B952550009AF58A /* SlideLeftSegue.swift */,
+				0798071E1B952587009AF58A /* SlideRightSegue.swift */,
+			);
+			name = "Custom Segue";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +279,11 @@
 				0731D8C61B75F3CF00384B33 /* MCPercentageDoughnutView.m in Sources */,
 				078C108B1B898415006E1681 /* ProjectCell.swift in Sources */,
 				07038F531B758F7A00D419B9 /* AppDelegate.swift in Sources */,
+				0798071F1B952587009AF58A /* SlideRightSegue.swift in Sources */,
 				07B02C7C1B79A86E002EE40D /* DatesView.swift in Sources */,
 				07848D271B86BAE70097AAD7 /* TimeEntryViewController.swift in Sources */,
 				07038F5B1B758F7A00D419B9 /* TimeManager.xcdatamodeld in Sources */,
+				0798071D1B952550009AF58A /* SlideLeftSegue.swift in Sources */,
 				0731D8C71B75F3CF00384B33 /* MCSliceLayer.m in Sources */,
 				07DF2E931B90FFF1002B76E7 /* AlertMessage.swift in Sources */,
 				078C10891B8983DC006E1681 /* ProjectsViewController.swift in Sources */,
